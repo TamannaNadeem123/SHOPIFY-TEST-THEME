@@ -1,0 +1,132 @@
+{{ 'manufacturing-process.css' | asset_url | stylesheet_tag }}
+
+<div class="process-wrapper">
+  <div class="myprocessSwiper swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="slide-card">
+            <div class="video-wrapper">
+              <video
+                muted
+                loop
+                src="{{ block.settings.video_url }}"
+                type="video/mp4"
+              ></video>
+            <button class="social-play-button">
+  <svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+    <circle cx="22.5" cy="22.5" r="22.5" fill="white" />
+    <path d="M17 15L30 22.5L17 30Z" fill="none" stroke="black" stroke-width="2"/>
+  </svg>
+</button>
+            </div>
+            <div class="slide-content">
+              <h2>{{ block.settings.heading | newline_to_br }}</h2>
+              <p>{{ block.settings.content | newline_to_br }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+{% schema %}
+{
+  "name": "Manufacturing Slider ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "slide",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Upload Video for slide"
+        },
+         {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Enter slide heading"
+        },
+         {
+          "type": "textarea",
+          "id": "content",
+          "label": "Enter slide content"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "MANUFACTURE PROCESS SLIDES"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  var swiper = new Swiper(".myprocessSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+       480: {
+        slidesPerView: 2,
+      },
+      720: {
+        slidesPerView: 3,
+      }
+    }
+  });
+
+  var buttons = document.querySelectorAll(".social-play-button");
+  var videos = document.querySelectorAll(".video-wrapper video");
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      var video = this.parentElement.querySelector("video");
+
+      for (var j = 0; j < videos.length; j++) {
+        if (videos[j] !== video) {
+          videos[j].pause();
+          var btn = videos[j].parentElement.querySelector(".social-play-button");
+          if (btn) {
+            btn.innerHTML = `
+              <svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                <circle cx="22.5" cy="22.5" r="22.5" fill="white" />
+                <path d="M17 15L30 22.5L17 30Z" fill="none" stroke="black" stroke-width="2"/>
+              </svg>
+            `;
+          }
+        }
+      }
+
+      if (video.paused) {
+        video.play();
+        this.innerHTML = `
+          <svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+            <circle cx="22.5" cy="22.5" r="22.5" fill="white" />
+            <g stroke="black" stroke-width="2">
+              <rect x="17" y="15" width="4" height="15" fill="none"/>
+              <rect x="24" y="15" width="4" height="15" fill="none"/>
+            </g>
+          </svg>
+        `;
+      } else {
+        video.pause();
+        this.innerHTML = `
+          <svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+            <circle cx="22.5" cy="22.5" r="22.5" fill="white" />
+            <path d="M17 15L30 22.5L17 30Z" fill="none" stroke="black" stroke-width="2"/>
+          </svg>
+        `;
+      }
+    });
+  }
+</script>

@@ -1,0 +1,117 @@
+.page-width{
+   max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.newsletter-wrapper {
+  text-align: left;
+}
+.newsletter-content h2 {
+
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    color: #3e6d3d;
+    margin-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+.newsletter-content p {
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #3e6d3d;
+    margin-bottom: 20px;
+}
+.newsletter-form {
+  display: flex;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+.newsletter-form input[type="email"]  {
+  flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #3e6d3d;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 475px;
+}
+.newsletter-button {
+  display: inline-flex;
+  align-items: center;
+    justify-content: center;
+    background-color: #3e6d3d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    letter-spacing: 3px;
+  margin-left:10px;
+}
+@media (max-width: 768px){
+  .newsletter-form {
+     display: flex;
+    flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+  }
+  .newsletter-form input[type="email"]  {
+    padding: 12px 15px;
+    border: 1px solid #3e6d3d;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 475px;
+}
+  .newsletter-button {
+  align-self: start;
+    justify-content: center;
+    background-color: #3e6d3d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    letter-spacing: 3px;
+    width:auto;
+    margin-top:10px;
+}
+  .newsletter-content h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #3e6d3d;
+    margin-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+  .newsletter-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #3e6d3d;
+    margin-bottom: 20px;
+}
+  .page-width{
+    padding-left:10px;
+  }
+}

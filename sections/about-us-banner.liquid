@@ -1,0 +1,132 @@
+{{ 'about-banner.css' |asset_url | stylesheet_tag }}
+<div
+  class="about-banner-background"
+  style="
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+> 
+<div class ="about-banner-container">
+   <div
+            class="
+              banner-content-wraper horizontal-{{ section.settings.desktop_alignment_horizontal }} vertical-{{ section.settings.desktop_alignment_vertical }}
+              mobile-horizontal-{{ section.settings.mobile_alignment_horizontal }} mobile-vertical-{{ section.settings.mobile_alignment_vertical }}
+            "
+          >
+  <div class="about-banner-content" style="background-color: {{ section.settings.content_box_background_color }}">
+    <h1 class="about-banner-heading"  style = "color: {{ section.settings.content_box_color }}"> {{ section.settings.content_box_text }} </h1>
+  </div>
+</div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "About us Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Choose Background Banner Image"
+      },
+       {
+        "type": "textarea",
+        "id": "content_box_text",
+        "label": "Enter text, you want to display"
+      },
+       {
+        "type": "color",
+        "id": "content_box_color",
+        "label": "Choose color for your text"
+      },
+      {
+        "type": "color",
+        "id": "content_box_background_color",
+        "label": "Choose color for your content box"
+      },
+       {
+      "type": "select",
+      "id": "desktop_alignment_horizontal",
+      "label": "Select Desktop Horizontal Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "desktop_alignment_vertical",
+      "label": "Select Desktop Vertical Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        { "value": "middle",
+          "label": "Middle"
+        },
+        { "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
+     {
+      "type": "select",
+      "id": "mobile_alignment_horizontal",
+      "label": "Select Mobile Horizontal Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+      
+    {
+      "type": "select",
+      "id": "mobile_alignment_vertical",
+      "label": "Select Mobile Vertical Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        { "value": "middle",
+          "label": "Middle"
+        },
+        { "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    ],
+    "presets": [
+      {
+        "name": "About Us Banner"
+      }
+    ]
+  }
+{% endschema %}

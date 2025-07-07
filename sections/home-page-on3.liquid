@@ -1,0 +1,117 @@
+{{ 'banner-home-page-one.css' |asset_url|stylesheet_tag }}
+<div class="banner-div">
+<div class="banner-div-image">
+            <img src="{{ section.settings.image |image_url: width: section.settings.image.width, height:section.settings.image.height  }}">
+        </div>
+  <div 
+  style="background-color:{{ section.settings.content_bg_color }}"
+  class="content horizontal-{{ section.settings.desktop_alignment_horizontal }} vertical-{{ section.settings.desktop_alignment_vertical }}
+mobile-only-horizontal-{{ section.settings.mobile_alignment_horizontal }} mobile-only-vertical-{{ section.settings.mobile_alignment_vertical }}
+            ">
+    <div class="content-details">
+  <h2 style="font-size: {{ settings.banner_font_heading_size }}px;">{{ section.settings.heading }}</h2>
+  <p style="font-size: {{ settings.banner_font_para_size }}px;">{{ section.settings.para_text |newline_to_br }}</p>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Choose image for this section",
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Insert heading..."
+      },
+            {
+        "type": "textarea",
+        "id": "para_text",
+        "label": "Insert description..."
+      },
+      {
+        "type": "color",
+        "id": "content_bg_color",
+        "label": "Choose Bg Color"
+      },
+      {
+        "type": "select",
+        "id": "desktop_alignment_horizontal",   
+        "label": "Select desktop horizontal position of text",
+        "options": [
+          {
+            "value": "left", "label": "left"
+          },
+          {
+            "value": "center", "label": "center"
+          },
+           {
+            "value": "right", "label": "right"
+          }          
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "desktop_alignment_vertical",
+        "label": "Select desktop vertical position of text",
+        "options": [
+          {
+            "value": "top", "label": "top"
+          },
+          {
+            "value": "middle", "label": "middle"
+          },
+           {
+            "value": "bottom", "label": "bottom"
+          }          
+        ],
+        "default": "bottom"
+      },
+       {
+        "type": "select",
+        "id": "mobile_alignment_vertical",
+        "label": "Select mobile vertical position of text",
+        "options": [
+          {
+            "value": "top", "label": "top"
+          },
+          {
+            "value": "middle", "label": "middle"
+          },
+           {
+            "value": "bottom", "label": "bottom"
+          }          
+        ],
+        "default": "bottom"
+      },
+       {
+        "type": "select",
+        "id": "mobile_alignment_horizontal",
+        "label": "Select mobile horizontal position of text",
+        "options": [
+          {
+            "value": "left", "label": "left"
+          },
+          {
+            "value": "center", "label": "center"
+          },
+           {
+            "value": "right", "label": "right"
+          }          
+        ],
+        "default": "center"
+      },
+    ],
+    "presets": [
+      {
+        "name": "Banner-home-page-1"
+      }
+    ]
+    
+  }
+{% endschema %}

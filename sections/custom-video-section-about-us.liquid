@@ -1,0 +1,50 @@
+{{ 'custom-video-about-us.css' |asset_url| stylesheet_tag }}
+
+
+<div class="custom-video-section">
+  <div class="custom-video-container">
+    <div class="custom-video-wrapper">
+      <video class="custom-video-element" playsinline="true" loop="loop" muted="muted">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    <div class="custom-video-controls">
+      <img class="custom-video-control-icon" src ="{{ section.settings.image |image_url }}">
+  </div>
+    </div>
+</div>
+</div>
+{% schema %}
+{
+  "name": "Custom Video",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Choose Video"
+    },
+     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Upload Image",
+    },
+  ],
+  "presets": [
+    {
+      "name": "Custom Video Section"
+    }
+  ]
+}
+{% endschema %}
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let video = document.querySelector('.custom-video-element');
+    let playButton = document.querySelector('.custom-video-controls');
+
+    playButton.addEventListener('click', function () {
+      video.play();
+      playButton.style.display = 'none';
+    });
+  });
+</script>

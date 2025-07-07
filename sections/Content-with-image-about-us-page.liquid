@@ -1,0 +1,39 @@
+{{ 'image-content-and-about-us.css' | asset_url | stylesheet_tag }}
+<div class="content-wrapper-reverse">
+  <div class="columns-reverse">
+    <div class="content-column-reverse">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description | newline_to_br }}</p>
+    </div>
+    <div class="image-column-reverse">
+      <img src="{{ section.settings.image_left |image_url: width: section.settings.image_left.width, height: section.settings.image_left.height }}">
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "IMAGE with CONTENT",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Choose Image for left side"
+    },
+     {
+      "type": "text",
+      "id": "heading",
+      "label": "Insert Heading for Right Side"
+    },
+     {
+      "type": "textarea",
+      "id": "description",
+      "label": "Insert Description for Right Column"
+    },
+  ],
+  "presets": [
+    {
+      "name": "IMAGE AND CONTENT REVERSE ABOUT-PAGE"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,66 @@
+{{ 'content-with-image.css'| asset_url | stylesheet_tag }}
+
+<div class = "content-with-image content-with-image-container">
+  <div class = "left-content-column">
+    <div class = "left-column-image">
+      <img src = "{{ section.settings.logo_image | image_url}}">
+    </div>
+    <h2 style = "color:{{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
+<p>{{ section.settings.para_text }}</p>
+  <a href="{{ section.settings.button_url }}"> {{ section.settings.button_text }}</a>
+    </div>
+<div class="right-video-column">
+  <video autoplay muted loop>
+    <source src = "{{ section.settings.video}}" type="video/mp4">
+  </video>
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Image with content",
+    "settings": [
+      {
+      "type":"image_picker",
+        "id":"logo_image",
+        "label": "Place LOGO here"
+    },
+      {
+        "type":"text",
+        "id":"heading",
+        "label": "HEADING"
+      },
+       {
+        "type":"color",
+        "id":"heading_color",
+        "label": "Choose Heading color"
+      },
+      {
+        "type":"textarea",
+        "id":"para_text",
+        "label": "Enter Paragraph here"
+      },
+      {
+        "type":"text",
+        "id":"button_text",
+        "label": "Enter Text"
+      },
+      {
+        "type":"url",
+        "id":"button_url",
+        "label": "Enter Link"
+      },
+      {
+        "type":"url",
+        "id":"video",
+        "label": "Choose Video"
+      },
+    ],
+    "presets": [
+      {
+        "name": "Content with Image"
+      }
+    ]
+  }
+{% endschema %}

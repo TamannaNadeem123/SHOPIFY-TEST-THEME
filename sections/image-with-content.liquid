@@ -1,0 +1,41 @@
+{{ 'image-and-content-side-by-side.css' | asset_url | stylesheet_tag }}
+<div class="image-and-content">
+  <div class="image-and-content-container">
+    <div class="image-and-content-columns">
+      <div class="content-column">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.para_text }}</p>
+      </div>
+      <div class="image-column">
+        <img src="{{ section.settings.image |image_url: width: section.settings.image.width, height: section.settings.image.height }}">
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Image with Content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Enter Heading"
+    },
+     {
+      "type": "textarea",
+      "id": "para_text",
+      "label": "Enter Paragraph Text"
+    },
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Choose Image"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Image with Text"
+    }
+  ]
+}
+{% endschema %}

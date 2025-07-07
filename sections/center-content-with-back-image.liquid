@@ -1,0 +1,53 @@
+{{ 'back-video-with-text.css' | asset_url | stylesheet_tag }}
+<div
+  class="back-image image-with-text-container"
+  style="
+    background-image: url('{{ section.settings.background_image | image_url: width: section.settings.background_image.width }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+  "
+>
+  <div class="page-width">
+  <div class="content-container">
+    <div class="logo-image">
+      <img src="{{ section.settings.logo | image_url: width: 78 }}px">
+    </div>
+    <div class="content-details">
+      <h2>{{ section.settings.heading | newline_to_br }}</h2>
+      <p>{{ section.settings.para_text | newline_to_br }}</p>
+    </div>
+  </div>
+</div>
+</div>
+{% schema %}
+{
+  "name": "Back-Image-with-content",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Choose BG Image"
+    },
+      {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Enter Text for Heading"
+    },
+     {
+      "type": "textarea",
+      "id": "para_text",
+      "label": "Enter Text for Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Place Logo"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Back-Image-with-content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,62 @@
+{{ 'content-with-left-image.css'| asset_url | stylesheet_tag }}
+
+<div class = "text-with-image" >
+ <div class = "text-with-image-container">
+<div class="left-image-column">
+ <img src="{{ section.settings.image |image_url: width: section.settings.image.width, height: section.settings.image.height  }}">
+</div>
+  <div class = "right-content-column">
+    <h2 style = "color:{{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
+<p>{{ section.settings.para_text  | newline_to_br}}</p>
+  <a href="{{ section.settings.button_url }}"> {{ section.settings.button_text }}</a>
+    </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with content",
+    "settings": [
+      {
+      "type":"image_picker",
+        "id":"logo_image",
+        "label": "Place LOGO here"
+    },
+      {
+        "type":"text",
+        "id":"heading",
+        "label": "HEADING"
+      },
+       {
+        "type":"color",
+        "id":"heading_color",
+        "label": "Choose Heading color"
+      },
+      {
+        "type":"textarea",
+        "id":"para_text",
+        "label": "Enter Paragraph here"
+      },
+      {
+        "type":"text",
+        "id":"button_text",
+        "label": "Enter Text"
+      },
+      {
+        "type":"url",
+        "id":"button_url",
+        "label": "Enter Link"
+      },
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label": "Choose Image"
+      },
+    ],
+    "presets": [
+      {
+        "name": "Image with Right Content"
+      }
+    ]
+  }
+{% endschema %}

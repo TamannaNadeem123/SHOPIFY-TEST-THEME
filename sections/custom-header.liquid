@@ -1,0 +1,468 @@
+{{ 'custom-header.css' | asset_url | stylesheet_tag }}
+<div class="announcement-bar">
+  <div class="announcement-bar-wrapper">
+    <div class="swiper-announcement-container swiper-announcement">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'announcement' %}
+            <div class="swiper-slide">
+              <div class="announcement-text">
+                <div class="announcement-item">{{ block.settings.text }}</div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="fixed-healthcare-button">
+      <a href="{{ section.settings.announcement_button_url }}">
+        {{ section.settings.announcement_button_text }}
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.8536 4.35355C12.0488 4.15829 12.0488 3.84171 11.8536 3.64645L8.67157 0.464466C8.47631 0.269204 8.15973 0.269204 7.96447 0.464466C7.7692 0.659728 7.7692 0.976311 7.96447 1.17157L10.7929 4L7.96447 6.82843C7.7692 7.02369 7.7692 7.34027 7.96447 7.53553C8.15973 7.7308 8.47631 7.7308 8.67157 7.53553L11.8536 4.35355ZM0.5 4.5L11.5 4.5V3.5L0.5 3.5L0.5 4.5Z" fill="currentColor"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="header-container">
+  <div class="main-header-desktop">
+    <div class="header-left">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | image_url}}" alt="Logo" class="logo">
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="header-center">
+      <ul class="main-menu">
+        <li class="has-mega-menu">
+          <a href="{{ section.settings.menu_item1_url }}">
+            {{- section.settings.menu_item1_text }}
+            <span class="main-nav__arrow">
+              <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5005 6L6.46484 11.0356L1.4292 6" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+          </a>
+          <div class="mega-menu">
+            {% for block in section.blocks %}
+              {% if block.type == 'menu' %}
+                <div class="mega-column">
+                  <h4>{{ block.settings.column1_heading }}</h4>
+                  <ul>
+                    <li>{{ block.settings.column1_link1 }}</li>
+                    <li>{{ block.settings.column1_link2 }}</li>
+                    <li>{{ block.settings.column1_link3 }}</li>
+                    <li>{{ block.settings.column1_link4 }}</li>
+                    <li>{{ block.settings.column1_link5 }}</li>
+                    <li>{{ block.settings.column1_link6 }}</li>
+                    <li>{{ block.settings.column1_link7 }}</li>
+                  </ul>
+                </div>
+                <div class="mega-column">
+                  <h4>{{ block.settings.column2_heading }}</h4>
+                  <ul>
+                    <li>{{ block.settings.column2_link1 }}</li>
+                    <li>{{ block.settings.column2_link2 }}</li>
+                    <li>{{ block.settings.column2_link3 }}</li>
+                    <li>{{ block.settings.column2_link4 }}</li>
+                    <li>{{ block.settings.column2_link5 }}</li>
+                    <li>{{ block.settings.column2_link6 }}</li>
+                    <li>{{ block.settings.column2_link7 }}</li>
+                  </ul>
+                </div>
+                <div class="mega-column">
+                  {% if block.settings.image1 %}
+                    <div class="mega-image">
+                      <img src="{{ block.settings.image1 | image_url }}" alt="Mega Image 1">
+                      <p class="Image-description">{{ block.settings.image1_description }}</p>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+        <li>
+          <a href="{{ section.settings.menu_item2_url }}">{{ section.settings.menu_item2_text }}</a>
+        </li>
+        <li>
+          <a href="{{ section.settings.menu_item3_url }}">{{ section.settings.menu_item3_text }}</a>
+        </li>
+        <li>
+          <a href="{{ section.settings.menu_item4_url }}">{{ section.settings.menu_item4_text }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-right">
+      <a href="{{ section.settings.icon1_url }}" class="icon-search">
+        <span class="svg-wrapper">
+          <svg
+            class="icon icon-search"
+            width="18"
+            height="20"
+            viewBox="0 0 18 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12.1113 13.5557L17.0002 18.4446" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M7.66667 14.889C11.3431 14.889 14.3333 11.8983 14.3333 8.22203C14.3333 4.54571 11.3431 1.55566 7.66667 1.55566C3.99019 1.55566 1 4.54632 1 8.22203C1 11.8977 3.9908 14.889 7.66667 14.889Z" stroke="#3E6D3D" stroke-width="2"></path>
+          </svg>
+        </span>
+      </a>
+      <a href="{{ section.settings.icon2_url }}" class="icon-login">
+        <svg
+          class="icon icon-account"
+          width="19"
+          height="22"
+          viewBox="0 0 19 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M10.4065 11.4858H8.59303C4.40638 11.4858 1 15.0159 1 19.3546V19.3915C1 20.121 1.57262 20.7144 2.27655 20.7144H16.7234C17.4274 20.7144 18 20.121 18 19.3915V19.3546C18 15.0155 14.5936 11.4858 10.4065 11.4858Z" stroke="#3E6D3D" stroke-width="2"></path>
+          <path d="M9.74252 10.0285C12.1532 10.0285 14.114 8.06748 14.114 5.65687C14.114 3.24626 12.1532 1.28564 9.74252 1.28564C7.3318 1.28564 5.37109 3.24666 5.37109 5.65687C5.37109 8.06708 7.3322 10.0285 9.74252 10.0285Z" stroke="#3E6D3D" stroke-width="2"></path>
+        </svg>
+      </a>
+      <a href="{{ section.settings.icon3_url }}" class="icon-cart"
+        ><span class="svg-wrapper">
+          <svg
+            class="icon icon-cart-empty"
+            width="19"
+            height="22"
+            viewBox="0 0 19 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M6 8.42857V4.47821C6 2.55154 7.51844 1 9.40476 1C11.2911 1 12.8095 2.55154 12.8095 4.47821V8.42857" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8315 6L17.9946 19.1329C18.0859 20.1647 16.9965 21 15.7572 21H3.24279C2.00349 21 0.91408 20.164 1.00535 19.1329L2.16845 6H16.8315Z" stroke="#3E6D3D" stroke-width="2" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="mobile-only-view">
+  <div class="hamburger-menu" id="toggle-menu">
+    <svg id ="hamburger-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3E6D3D">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11066)"> <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#3E6D3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11066"> <rect width="24" height="24" fill="#3E6D3D" transform="translate(0 0.000915527)"></rect> </clipPath> </defs> </g>
+    </svg>
+    <svg id="cross-icon" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <line x1="18" y1="6" x2="6" y2="18" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="6" x2="18" y2="18" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  </div>
+  <div class="dropdown-menu-items">
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <span class="search-icon-wrapper">
+        <svg
+          class="icon icon-search"
+          width="18"
+          height="20"
+          viewBox="0 0 18 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12.1113 13.5557L17.0002 18.4446" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M7.66667 14.889C11.3431 14.889 14.3333 11.8983 14.3333 8.22203C14.3333 4.54571 11.3431 1.55566 7.66667 1.55566C3.99019 1.55566 1 4.54632 1 8.22203C1 11.8977 3.9908 14.889 7.66667 14.889Z" stroke="#3E6D3D" stroke-width="2"></path>
+        </svg>
+      </span>
+    </div>
+    
+    <ul class="menu-links">
+       
+      <li class="menu-item">
+        <img src="{{ section.blocks[0].settings.image22 | image_url }}" alt="shop">
+        <a href="{{ section.settings.menu_item1_url }}">{{ section.settings.menu_item1_text }} </a>
+         <span class="nav__arrow">
+  <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 3L10 8L5 13" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</span>
+      </li>
+      <li class="menu-item">
+        <img src="{{ section.blocks[0].settings.image1 | image_url }}" alt="Bundles">
+        <a href="{{ section.settings.menu_item2_url }}">{{ section.settings.menu_item2_text }}</a>
+      </li>
+      <li class="menu-item">
+        <img src="{{ section.blocks[0].settings.image3 | image_url }}" alt="About Us">
+        <a href="{{ section.settings.menu_item3_url }}">{{ section.settings.menu_item3_text }}</a>
+      </li>
+      <li class="menu-item">
+        <img src="{{ section.blocks[0].settings.image4 | image_url }}" alt="Education">
+        <a href="{{ section.settings.menu_item4_url }}">{{ section.settings.menu_item4_text }}</a>
+      </li>
+
+    </ul>
+
+  </div>
+  <div class="logo-center">
+    {% if section.settings.logo %}
+      <img src="{{ section.settings.logo | image_url}}" alt="Logo" class="logo">
+    {% endif %}
+  </div>
+  <div class="right-icon">
+    <a href="{{ section.settings.icon3_url }}" class="icon-cart"
+      ><span class="svg-wrapper">
+        <svg
+          class="icon icon-cart-empty"
+          width="19"
+          height="22"
+          viewBox="0 0 19 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M6 8.42857V4.47821C6 2.55154 7.51844 1 9.40476 1C11.2911 1 12.8095 2.55154 12.8095 4.47821V8.42857" stroke="#3E6D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8315 6L17.9946 19.1329C18.0859 20.1647 16.9965 21 15.7572 21H3.24279C2.00349 21 0.91408 20.164 1.00535 19.1329L2.16845 6H16.8315Z" stroke="#3E6D3D" stroke-width="2" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+    </a>       
+  </div>     
+</div>
+--!>
+{% schema %}
+{
+  "name": "Custom Mega Menu",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "announcement_button_text",
+      "label": "Announcement Button Text"
+    },
+    {
+      "type": "url",
+      "id": "announcement_button_url",
+      "label": "Announcement Button URL"
+    },
+    {
+      "type": "text",
+      "id": "menu_item1_text",
+      "label": "Menu Item 1"
+    },
+     {
+      "type": "url",
+      "id": "menu_item1_url",
+      "label": "Menu Item 1 url"
+    },
+
+    {
+      "type": "text",
+      "id": "menu_item2_text",
+      "label": "Menu Item 2"
+    },
+     {
+      "type": "url",
+      "id": "menu_item2_url",
+      "label": "Menu Item 2 url"
+    },
+    {
+      "type": "text",
+      "id": "menu_item3_text",
+      "label": "Menu Item 3"
+    },
+     {
+      "type": "url",
+      "id": "menu_item3_url",
+      "label": "Menu Item 3 url"
+    },
+    {
+      "type": "text",
+      "id": "menu_item4_text",
+      "label": "Menu Item 4"
+    },
+     {
+      "type": "url",
+      "id": "menu_item4_url",
+      "label": "Menu Item 4 url"
+    },
+     {
+      "type": "url",
+      "id": "icon1_url",
+      "label": "Enter Icon 1 URL"
+    },
+    {
+      "type": "url",
+      "id": "icon2_url",
+      "label": "Enter Icon 2 URL"
+    },
+    {
+      "type": "url",
+      "id": "icon3_url",
+      "label": "Enter Icon 3 URL"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_text",
+          "label": "Menu Text"
+        },
+        {
+          "type": "text",
+          "id": "column1_heading",
+          "label": "Column 1 Heading"
+        },
+        {
+          "type": "text",
+          "id": "column1_link1",
+          "label": "Column 1 Link 1"
+        },
+        {
+          "type": "text",
+          "id": "column1_link2",
+          "label": "Column 1 Link 2"
+        },
+        {
+          "type": "text",
+          "id": "column1_link3",
+          "label": "Column 1 Link 3"
+        },
+        {
+          "type": "text",
+          "id": "column1_link4",
+          "label": "Column 1 Link 4"
+        },
+        {
+          "type": "text",
+          "id": "column1_link5",
+          "label": "Column 1 Link 5"
+        },
+        {
+          "type": "text",
+          "id": "column1_link6",
+          "label": "Column 1 Link 6"
+        },
+        {
+          "type": "text",
+          "id": "column1_link7",
+          "label": "Column 1 Link 7"
+        },
+        {
+          "type": "text",
+          "id": "column2_heading",
+          "label": "Column 2 Heading"
+        },
+        {
+          "type": "text",
+          "id": "column2_link1",
+          "label": "Column 2 Link 1"
+        },
+        {
+          "type": "text",
+          "id": "column2_link2",
+          "label": "Column 2 Link 2"
+        },
+        {
+          "type": "text",
+          "id": "column2_link3",
+          "label": "Column 2 Link 3"
+        },
+        {
+          "type": "text",
+          "id": "column2_link4",
+          "label": "Column 2 Link 4"
+        },
+        {
+          "type": "text",
+          "id": "column2_link5",
+          "label": "Column 2 Link 5"
+        },
+        {
+          "type": "text",
+          "id": "column2_link6",
+          "label": "Column 2 Link 6"
+        },
+        {
+          "type": "text",
+          "id": "column2_link7",
+          "label": "Column 2 Link 7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "textarea",
+          "id": "image1_description",
+          "label": "Image 1 Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "textarea",
+          "id": "image2_description",
+          "label": "Image 2 Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image22",
+          "label": "Image 22"
+        },
+         {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image 3"
+        },
+         {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image 4"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Mega Menu"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggle-menu");
+    const dropdown = document.querySelector(".dropdown-menu-items");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+  const crossIcon = document.getElementById("cross-icon");
+    if (toggleBtn && dropdown) {
+      toggleBtn.addEventListener("click", function () {
+        dropdown.classList.toggle("active");
+       if (dropdown.classList.contains("active")) {
+        hamburgerIcon.style.display = "none";
+        crossIcon.style.display = "block";
+      } else {
+        hamburgerIcon.style.display = "block";
+        crossIcon.style.display = "none";
+      }
+    });
+  }
+});
+</script>

@@ -1,0 +1,38 @@
+{{ 'pull-quote-section.css' |asset_url |stylesheet_tag }}
+
+<div class="pull-quote-background">
+  <img class="background_image" src = "{{section.settings.backgroun_image | image_url: width: section.settings.backgroun_image.width, height: section.settings.backgroun_image.height }}">
+<div class="pull-quote-container page-width">
+ <div class = "pull-quote-content">
+   <h2 class="review">"{{ section.settings.review }}"</h2>
+   <p class="customer_name">{{ section.settings.customer_name }}</p>
+ </div>
+</div>
+  </div>
+{% schema %}
+  {
+    "name": "Pull Quote",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "backgroun_image",
+        "label": "Choose BG Image for Pull Quote"
+      },
+       {
+        "type": "textarea",
+        "id": "review",
+        "label": "Enter review, you want to leave"
+      },
+      {
+        "type": "text",
+        "id": "customer_name",
+        "label": "Enter your name"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pull Quote Section"
+      }
+    ]
+  }
+{% endschema %}

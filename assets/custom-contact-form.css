@@ -1,0 +1,163 @@
+.contact-us-section{
+  position: relative;
+    padding-top: 144px;
+    padding-bottom: 144px;
+    background-color: ;
+    overflow: hidden;
+}
+.desktop-image-only{
+  display: block;
+}
+.mobile-image-only{
+  display: none;
+}
+.left-side-content-column form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+input[type="text"] {
+ width: 100%;
+    padding: 10px;
+    border: 1px solid #3e6d3d;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #ffffff;
+    color: #333333;
+}
+input[type="email"] {
+ width: 100%;
+    padding: 10px;
+    border: 1px solid #3e6d3d;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #ffffff;
+    color: #333333;
+}
+ textarea {
+ width: 100%;
+    padding: 10px;
+    border: 1px solid #3e6d3d;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #ffffff;
+    color: #333333;
+}
+.contact-us-form-container{
+     display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 72px;
+    z-index: 1;
+}
+.left-side-content-column h2{
+
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    margin: 0;
+  color: #3E6D3D;
+}
+.contact-form__label {
+   
+  color: #3e6d3d;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+.required {
+    color: #3e6d3d;
+   
+}
+.left-side-content-column{
+  display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 300px;
+    padding: 36px;
+    max-width: 540px;
+}
+.contact-form-column-content{
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  color: black;
+}
+.contact-form-column-content p{
+ margin: 0 0 24px;
+}
+.right-image-side{
+  min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 612px;
+}
+.right-image-side img   {
+      max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.submit a{
+ display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e6d3d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: CircularXX;
+    padding: 9px 24px;
+    border-radius:30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    letter-spacing: 3px;
+}
+.contact-us-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contact-us-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.back-desktop-only{
+  display: block;
+}
+.back-mobile-only{
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .contact-us-form-container{
+     display: flex;
+    flex-direction: column;
+}
+  .desktop-image-only{
+  display: none;
+}
+  .back-mobile-only{
+  display: block;
+}
+.back-desktop-only{
+  display: none;
+}
+
+.mobile-image-only{
+  display: block;
+}
+  .left-side-content-column{
+    gap: 24px;
+  }
+  .left-side-content-column h2{
+          font-size: 36px;
+        line-height: 36px;
+}
+}

@@ -1,0 +1,170 @@
+{{ 'best-selling-oak.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+<div class="best-selling-wrapper">
+  <div class = "section-header-desktop-only">
+    <h2>{{ section.settings.section_heading }}</h2>
+    <p class=view-all-button>{{section.settings.section_button }}</p>
+  </div>
+  <div class="mybestsellingSwiper swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="slide-card">
+          <div class="image-wrapper">
+           <img src="{{block.settings.image |image_url }}">
+          </div>
+            <div style="background-color:{{block.settings.bg_color }};
+              color: #FFFFFF"
+              class="promotion-button">
+              <p>{{ block.settings.promotion }}</p>
+            </div>
+          <div class="slide-content">
+            <h2>{{block.settings.heading |newline_to_br }}</h2>
+            <p>{{ block.settings.content | newline_to_br }}</p>
+            <span>from</span>
+             <span class="bold-offer-1">  {{ block.settings.offer_price_before_1 }} </span> 
+             <span class="old-offer-1">  {{ block.settings.offer_price_after_1 }} 
+            </span>
+         
+            <span class="bold-offer ">  {{ block.settings.offer_price_before }} </span>
+      <span class="old-offer">  {{ block.settings.offer_price_after }} 
+         per meter
+            </span>
+          </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-button-custom-next">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="40" rx="20" fill="white"/>
+<path d="M17 26L23 20L17 14" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+  </div>
+  </div>
+   <div class = "section-header-mobile-only">
+    <p>{{section.settings.section_button }}</p>
+  </div>
+</div>
+ 
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+{% schema %}
+  {
+    "name": "Best Selling Slider ",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "section_heading",
+        "label": "Choose Section Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "section_button",
+        "label": "Choose Button Text",
+        "default": "VIEW ALL"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Upload Image for slide"
+          },
+           {
+            "type": "color",
+            "id": "bg_color",
+            "label": "choose bg color for promotion label"
+          },
+          {
+            "type": "textarea",
+            "id": "promotion",
+            "label": "Discount button on image"
+           },
+            {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Enter slide heading"
+          },
+           {
+            "type": "textarea",
+            "id": "content",
+            "label": "Enter slide content"
+           },
+            {
+            "type": "text",
+            "id": "offer_price_before",
+            "label": "Write price per meter and offer if any"
+          },
+           {
+            "type": "text",
+            "id": "offer_price_before_1",
+            "label": "Write price per meter before 1 and offer if any"
+          },
+             {
+            "type": "text",
+            "id": "offer_price_after_1",
+            "label": "Write price per meter after 1 offer if any"
+          },
+           {
+            "type": "text",
+            "id": "offer_price_after",
+            "label": "Write price per meter after offer if any"
+          },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Best-selling SLIDES"
+      }
+    ]
+  }
+{% endschema %}
+<script>
+  var swiper = new Swiper(".mybestsellingSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    loop: false,
+    navigation: {
+      nextEl: ".swiper-button-custom-next",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    },
+    on: {
+      init: checkNextButton,
+      slideChange: checkNextButton,
+      resize: checkNextButton,
+    }
+  });
+  function checkNextButton() {
+    const nextBtn = document.querySelector('.swiper-button-custom-next');
+    const currentIndex = swiper.activeIndex;
+    const totalSlides = swiper.slides.length;
+
+
+    let slidesToShow = window.innerWidth <= 480 ? 1 : 4;
+
+    const lastIndex = totalSlides - slidesToShow;
+
+    if (currentIndex >= lastIndex) {
+      nextBtn.style.pointerEvents = "none";
+ 
+    } else {
+      nextBtn.style.pointerEvents = "auto";
+      nextBtn.style.opacity = "1";
+    }
+  }
+</script>

@@ -1,0 +1,38 @@
+.wrapper-content h2{
+  font-weight: 200;
+  font-family: var(--body-font) !important;
+letter-spacing: 0;
+    word-break: break-word;
+  overflow: hidden;
+}
+.MysocialSwiper{
+    overflow: hidden;
+}
+.MysocialSwiper .swiper-slide{
+  flex-shrink: 0;
+    height: 100%;
+  width: auto;
+    position: relative;
+    display: block;
+}
+
+.MysocialSwiper .swiper-wrapper{
+ position: relative;
+   width: 100%; 
+    height: 100%; 
+    z-index: 1;
+    gap: 10px;
+    display: flex;
+}
+.ending-text{
+  text-align: center;
+  font-family:  var(--heading-font) !important;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 100;
+}
+@media (min-width: 1400px) {
+  .MysocialSwiper .swiper-wrapper {
+    justify-content: center; 
+  }
+}

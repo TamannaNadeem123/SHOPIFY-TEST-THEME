@@ -1,0 +1,223 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+{{ 'banner-with-content.css' | asset_url | stylesheet_tag }}
+<div class="swiper custom-swiper">
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="custom-banner-section" style="height: {{ section.settings.desktop_height }}px;">
+          {% if block.settings.background_type == 'image' and block.settings.image_url != blank %}
+            <div class="banner-bg-image" style="background-image: url('{{ block.settings.image_url | image_url }}');"></div>
+          {% elsif block.settings.background_type == 'video' and block.settings.video != blank %}
+            <div class="banner-video">
+              <video autoplay muted loop>
+                <source src="{{ block.settings.video }}" type="video/mp4">
+              </video>
+            </div>
+          {% endif %}
+
+          <div class="banner-content-wraper 
+                      horizontal-{{ section.settings.desktop_alignment_horizontal }} 
+                      vertical-{{ section.settings.desktop_alignment_vertical }} 
+                      mobile-horizontal-{{ section.settings.mobile_alignment_horizontal }} 
+                      mobile-vertical-{{ section.settings.mobile_alignment_vertical }}">
+            <div class="banner-content-box" style="background-color:{{ section.settings.content_background_color }}; color:{{ section.settings.text_color }};">
+              <h2>{{ block.settings.heading_text }}</h2>
+              <p>{{ block.settings.para_text }}</p>
+              <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next swiper-next"></div>
+  <div class="swiper-button-prev swiper-prev"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".custom-swiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Banner with content",
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Select Desktop Section Height",
+      "min": 400,
+      "max": 1000,
+      "unit": "px",
+      "step": 30,
+      "default": 550
+    },
+    {
+      "type": "select",
+      "id": "desktop_alignment_horizontal",
+      "label": "Select Desktop Horizontal Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "desktop_alignment_vertical",
+      "label": "Select Desktop Vertical Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        { "value": "middle",
+          "label": "Middle"
+        },
+        { "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
+     {
+      "type": "select",
+      "id": "mobile_alignment_horizontal",
+      "label": "Select Mobile Horizontal Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_alignment_vertical",
+      "label": "Select Mobile Vertical Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        { "value": "middle",
+          "label": "Middle"
+        },
+        { "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "color",
+      "id": "content_background_color",
+      "label": "Choose Background Color of Content Box",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Choose Text Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+    "name": "Banner Slides",
+      "type": "background_block",
+      "settings": [
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "Choose Background",
+      "default": "video",
+      "options": [
+        {
+          "value": "image",
+          "label": "Background Image"
+        },
+        {
+          "value": "video",
+          "label": "Background Video"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image_url",
+      "label": "Choose Your Background Image"
+    },
+    {
+      "type": "url",
+      "id": "video",
+      "label": "Video URL"
+    },
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Enter Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "para_text",
+          "label": "Enter Paragraph"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Enter Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Enter Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner with content Section"
+    }
+  ]
+}
+{% endschema %}

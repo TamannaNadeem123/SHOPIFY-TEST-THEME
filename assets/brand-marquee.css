@@ -1,0 +1,49 @@
+.brand-marquee {
+  padding: 30px 0;
+   overflow: hidden ;
+}
+.banner-marquee-container{
+  max-width: 1400px;
+}
+.brand-swiper {
+  overflow: hidden !important;
+}
+
+.brand-marquee .swiper-wrapper {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  transition-timing-function: linear !important;
+}
+
+.brand-marquee .swiper-slide {
+  width: auto !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-swiper-image {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.brand-swiper-image img {
+  height: 65px;
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.3s linear;
+}
+@media only screen and (max-width: 768px) {
+  .brand-swiper-image {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.brand-swiper-image img {
+  height: 75px;
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.3s linear;
+}
+}

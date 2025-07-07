@@ -1,0 +1,111 @@
+.text-with-image-container{
+  max-width:1200px;
+  gap:50px;
+   display: flex;
+  padding: 40 20px;
+  margin: 0 auto;
+  width:100%;
+}
+.text-with-image {
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+.right-content-column {
+  width: 40%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.right-content-column h2 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 48px;
+    margin-bottom: 10px;
+    color: #3E6D3D;
+    text-align: left;
+}
+.right-content-column p {
+  font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  color: black;
+}
+.right-content-column a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 16px;
+  background-color: #3e6d3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.left-image-column {
+  width: 60%;
+  max-width: 650px;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+.left-image-column img {
+  max-width: 100%;
+ object-fit: contain;
+  border-radius: 30px;
+}
+@media screen and (max-width: 768px) {
+  .text-with-image-container{
+   display: flex;
+   flex-direction: column-reverse;
+    padding: 20px 16px;
+    text-align: center;
+    overflow:hidden;
+  }
+
+  .right-content-column,
+  .left-image-column {
+    width: 100%;
+  }
+
+  .right-content-column h2 {
+    font-size: 32px;
+    text-align: center;
+    display: webkitbox;
+    webkit-line-clamp: 2;
+    margin-bottom: 10px;
+  }
+
+  .right-content-column p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 15px;
+    padding: 0 12px;
+  }
+
+  .right-content-column a {
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: #3e6d3d;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .left-image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .text-with-image {
+    padding: 50px 25px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .text-with-image {
+    padding: 50px 30px;
+  }
+}

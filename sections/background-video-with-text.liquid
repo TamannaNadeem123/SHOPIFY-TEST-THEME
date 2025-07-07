@@ -1,0 +1,108 @@
+{{ 'video-with-content.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+<div class="background-video-carrousel">
+  <div class ="section-container">
+  <div class="swiper video-swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <video autoplay muted loop playsinline class="background-video">
+            <source src="{{ block.settings.video_url }}" type="video/mp4">
+          </video>
+          <div
+            class="overlay"
+            style="display:block; background-color:{{ block.settings.overlay_color}}; opacity:{{ block.settings.overlay_opacity }}"
+          ></div>
+          <div class="content">
+            <h1>{{ block.settings.heading | newline_to_br }}</h1>
+            <p>{{ block.settings.para }}</p>
+            <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{% schema %}
+{
+  "name": "Background-Video-content",
+  "settings": [],
+  "blocks": [
+    {
+      "name":"video slides",
+      "type":"slides",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Choose your background video"
+        },
+        {
+            "type":"color",
+          "id": "overlay_color",
+          "label": "Choose color of overlay ",
+          "default":"#000000"
+        },
+        {
+          "type": "range",
+          "label": "overlay Opacity",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 1,
+          "step":0.1,
+          "default":0.5,
+        },
+        {
+          "type":"textarea",
+          "id": "heading",
+          "label": "Place Heading content of your slide "
+        },
+          {
+          "type":"textarea",
+          "id": "para",
+          "label": "Place Paragraph content of your slide "
+        },
+         {
+          "type":"text",
+          "id": "button_text",
+          "label": "write text of your button "
+        },
+        {
+          "type":"url",
+          "id": "button_url",
+          "label": "add url to your button "
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "background-with-content"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper(".video-swiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      autoplay: {
+        delay: 15000,
+           disableOnInteraction: false
+      }
+    });
+  });
+</script>

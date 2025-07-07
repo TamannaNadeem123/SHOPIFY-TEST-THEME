@@ -1,0 +1,71 @@
+{{ 'brand-marquee.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+<div class="brand-marquee">
+  <div class="brand-marquee-container">
+  <div class="swiper brand-swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="brand-swiper-image">
+            <img
+              src="{{ block.settings.image | image_url: width: block.settings.image.width, height: block.settings.image.height }}"
+              alt="Brand logo"
+            >
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+{% schema %}
+{
+  "name": "Brand Marquee",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Brand Logo"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Brand Marquee"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".brand-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      speed: 4000,
+      allowTouchMove: false,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      freeMode: true,
+      freeModeMomentum: false,
+      cssMode: false
+    });
+  });
+</script>

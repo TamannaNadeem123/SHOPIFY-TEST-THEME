@@ -1,0 +1,436 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    <div class="footer__background footer__background--desktop">
+      <img src="{{ section.settings.image | image_url }}" alt="Image">
+    </div>
+    <div class="footer__background footer__background--mobile">
+      <img src="{{ section.settings.image | image_url }}" alt="Image">
+    </div>
+    <div class="footer-content">
+      <div class="footer-branding">
+        {% if section.settings.logo %}
+          <div class="footer-logo">
+            <img src="{{ section.settings.logo | image_url }}" alt="Logo" style="max-width: 150px;">
+          </div>
+        {% endif %}
+        <div class="footer-social">
+          <a href="{{ section.settings.facebook }}" class="footer-social-links">
+            <svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10988 24.9681V12.4826H12.7321L13.2121 8.18002H9.10988L9.11603 6.02654C9.11603 4.90436 9.22809 4.30307 10.922 4.30307H13.1865V0H9.56374C5.21228 0 3.68068 2.08721 3.68068 5.59725V8.18051H0.968262V12.4831H3.68068V24.9681H9.10988Z" fill="#3E6D3D"></path>
+            </svg>
+          </a>
+          <a href="{{ section.settings.instagram }}" class="footer-social-links">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4852 0C9.09473 0 8.66923 0.0148248 7.33758 0.0754245C6.00854 0.136284 5.10135 0.346693 4.30757 0.655413C3.48647 0.974277 2.78996 1.40082 2.09604 2.09498C1.40161 2.78889 0.975067 3.48539 0.65516 4.30622C0.345656 5.10026 0.134985 6.00769 0.0751652 7.33621C0.0156052 8.66784 0 9.0936 0 12.4841C0 15.8745 0.0150851 16.2987 0.0754253 17.6304C0.136546 18.9594 0.346956 19.8666 0.65542 20.6603C0.974547 21.4814 1.40109 22.1779 2.09526 22.8718C2.78892 23.5663 3.48543 23.9938 4.30601 24.3127C5.10031 24.6214 6.00776 24.8318 7.33654 24.8927C8.66819 24.9533 9.09343 24.9681 12.4837 24.9681C15.8744 24.9681 16.2986 24.9533 17.6303 24.8927C18.9593 24.8318 19.8675 24.6214 20.6619 24.3127C21.4827 23.9938 22.1782 23.5663 22.8718 22.8718C23.5662 22.1779 23.9928 21.4814 24.3127 20.6606C24.6196 19.8666 24.8303 18.9591 24.8927 17.6306C24.9525 16.299 24.9681 15.8745 24.9681 12.4841C24.9681 9.0936 24.9525 8.6681 24.8927 7.33647C24.8303 6.00743 24.6196 5.10026 24.3127 4.30648C23.9928 3.48539 23.5662 2.78889 22.8718 2.09498C22.1774 1.40056 21.483 0.974017 20.6611 0.655413C19.8652 0.346693 18.9575 0.136284 17.6285 0.0754245C16.2968 0.0148248 15.8729 0 12.4813 0H12.4852ZM11.3649 2.24926C11.6973 2.24874 12.0682 2.24926 12.4849 2.24926C15.8181 2.24926 16.2132 2.26123 17.5295 2.32105C18.7467 2.3767 19.4074 2.58009 19.8474 2.75097C20.43 2.97724 20.8454 3.24773 21.2821 3.68467C21.719 4.12161 21.9895 4.53775 22.2163 5.12034C22.3872 5.55988 22.5908 6.22049 22.6462 7.43769C22.706 8.75372 22.719 9.14905 22.719 12.4807C22.719 15.8124 22.706 16.2077 22.6462 17.5238C22.5906 18.741 22.3872 19.4016 22.2163 19.8411C21.99 20.4237 21.719 20.8386 21.2821 21.2752C20.8451 21.7122 20.4303 21.9827 19.8474 22.2089C19.4079 22.3806 18.7467 22.5835 17.5295 22.6391C16.2135 22.6989 15.8181 22.7119 12.4849 22.7119C9.15133 22.7119 8.75626 22.6989 7.44022 22.6391C6.22301 22.5829 5.56239 22.3796 5.12206 22.2087C4.53946 21.9824 4.12332 21.7119 3.68638 21.275C3.24943 20.838 2.97894 20.4229 2.75214 19.8401C2.58126 19.4005 2.37762 18.7399 2.32222 17.5227C2.2624 16.2067 2.25043 15.8114 2.25043 12.4776C2.25043 9.14384 2.2624 8.7506 2.32222 7.43457C2.37788 6.21737 2.58126 5.55676 2.75214 5.11669C2.97842 4.53411 3.24943 4.11797 3.68638 3.68103C4.12332 3.24409 4.53946 2.9736 5.12206 2.7468C5.56213 2.57515 6.22301 2.37228 7.44022 2.31636C8.59188 2.26435 9.03819 2.24874 11.3649 2.24614V2.24926ZM19.1475 4.32281C18.3204 4.32281 17.6494 4.99305 17.6494 5.82038C17.6494 6.64745 18.3204 7.31847 19.1475 7.31847C19.9745 7.31847 20.6456 6.64745 20.6456 5.82038C20.6456 4.99331 19.9745 4.32229 19.1475 4.32229V4.32281ZM12.4864 6.0726C8.94581 6.0726 6.07523 8.94315 6.07523 12.4837C6.07523 16.0242 8.94581 18.8935 12.4864 18.8935C16.0269 18.8935 18.8965 16.0242 18.8965 12.4837C18.8965 8.94315 16.0267 6.0726 12.4861 6.0726H12.4864ZM12.484 8.32331C14.7821 8.32331 16.6454 10.1863 16.6454 12.4847C16.6454 14.7828 14.7821 16.646 12.484 16.646C10.1856 16.646 8.32261 14.7828 8.32261 12.4847C8.32261 10.1863 10.1856 8.32331 12.484 8.32331Z" fill="#3E6D3D"></path>
+            </svg>
+          </a>
+          <a href="{{ section.settings.youtube }}" class="footer-social-links">
+            <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4507 1.17808C23.525 1.4683 24.3711 2.32344 24.6583 3.40939C25.18 5.37755 25.18 9.48412 25.18 9.48412C25.18 9.48412 25.18 13.5906 24.6583 15.5589C24.3711 16.6448 23.525 17.4999 22.4507 17.7903C20.5038 18.3176 12.696 18.3176 12.696 18.3176C12.696 18.3176 4.88819 18.3176 2.9411 17.7903C1.86676 17.4999 1.02068 16.6448 0.733549 15.5589C0.211914 13.5906 0.211914 9.48412 0.211914 9.48412C0.211914 9.48412 0.211914 5.37755 0.733549 3.40939C1.02068 2.32344 1.86676 1.4683 2.9411 1.17808C4.88819 0.650635 12.696 0.650635 12.696 0.650635C12.696 0.650635 20.5038 0.650635 22.4507 1.17808ZM10.3573 6.02768V13.709L16.5993 9.86847L10.3573 6.02768Z" fill="#3E6D3D"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column active">
+          <div class="footer-column-heading" onclick="toggleFooter(this)">
+            <h4>{{ section.settings.heading_1 }}</h4>
+            <span class="toggle-icon">-</span>
+          </div>
+          <ul class="footer-column-content">
+            <li>
+              <a href="{{ section.settings.link1_url_1 }}">{{ section.settings.link1_label_1 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_2 }}">{{ section.settings.link1_label_2 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_3 }}">{{ section.settings.link1_label_3 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_4 }}">{{ section.settings.link1_label_4 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_5 }}">{{ section.settings.link1_label_5 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_6 }}">{{ section.settings.link1_label_6 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_7 }}">{{ section.settings.link1_label_7 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_8 }}">{{ section.settings.link1_label_8 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_9 }}">{{ section.settings.link1_label_9 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link1_url_10 }}">{{ section.settings.link1_label_10 }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="footer-column-heading" onclick="toggleFooter(this)">
+            <h4>{{ section.settings.heading_2 }}</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <ul class="footer-column-content">
+            <li>
+              <a href="{{ section.settings.link2_url_1 }}">{{ section.settings.link2_label_1 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link2_url_2 }}">{{ section.settings.link2_label_2 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link2_url_3 }}">{{ section.settings.link2_label_3 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link2_url_4 }}">{{ section.settings.link2_label_4 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link2_url_5 }}">{{ section.settings.link2_label_5 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link2_url_6 }}">{{ section.settings.link2_label_6 }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-column-heading" onclick="toggleFooter(this)">
+            <h4>{{ section.settings.heading_3 }}</h4>
+            <span class="toggle-icon">+</span>
+          </div>
+          <ul class="footer-column-content">
+            <li>
+              <a href="{{ section.settings.link3_url_1 }}">{{ section.settings.link3_label_1 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link3_url_2 }}">{{ section.settings.link3_label_2 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link3_url_3 }}">{{ section.settings.link3_label_3 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link3_url_4 }}">{{ section.settings.link3_label_4 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link3_url_5 }}">{{ section.settings.link3_label_5 }}</a>
+            </li>
+            <li>
+              <a href="{{ section.settings.link3_url_6 }}">{{ section.settings.link3_label_6 }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">© 2025 Good Clean Love.</div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Simple Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f7f7f7"
+    },
+    {
+       "type": "image_picker",
+      "id": "image",
+      "label": "Footer Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Column 1 Heading"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_1",
+      "label": "Link 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_1",
+      "label": "Link 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_2",
+      "label": "Link 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_2",
+      "label": "Link 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_3",
+      "label": "Link 3 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_3",
+      "label": "Link 3 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_4",
+      "label": "Link 4 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_4",
+      "label": "Link 4 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_5",
+      "label": "Link 5 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_5",
+      "label": "Link 5 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_6",
+      "label": "Link 6 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_6",
+      "label": "Link 6 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_7",
+      "label": "Link 7 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_7",
+      "label": "Link 7 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_8",
+      "label": "Link 8 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_8",
+      "label": "Link 8 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_9",
+      "label": "Link 9 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_9",
+      "label": "Link 9 URL"
+    },
+    {
+      "type": "text",
+      "id": "link1_label_10",
+      "label": "Link 10 Text"
+    },
+    {
+      "type": "url",
+      "id": "link1_url_10",
+      "label": "Link 10 URL"
+    },
+
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Column 2 Heading"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_1",
+      "label": "Link 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_1",
+      "label": "Link 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_2",
+      "label": "Link 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_2",
+      "label": "Link 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_3",
+      "label": "Link 3 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_3",
+      "label": "Link 3 URL"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_4",
+      "label": "Link 4 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_4",
+      "label": "Link 4 URL"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_5",
+      "label": "Link 5 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_5",
+      "label": "Link 5 URL"
+    },
+    {
+      "type": "text",
+      "id": "link2_label_6",
+      "label": "Link 6 Text"
+    },
+    {
+      "type": "url",
+      "id": "link2_url_6",
+      "label": "Link 6 URL"
+    },
+
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Column 3 Heading"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_1",
+      "label": "Link 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_1",
+      "label": "Link 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_2",
+      "label": "Link 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_2",
+      "label": "Link 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_3",
+      "label": "Link 3 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_3",
+      "label": "Link 3 URL"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_4",
+      "label": "Link 4 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_4",
+      "label": "Link 4 URL"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_5",
+      "label": "Link 5 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_5",
+      "label": "Link 5 URL"
+    },
+    {
+      "type": "text",
+      "id": "link3_label_6",
+      "label": "Link 6 Text"
+    },
+    {
+      "type": "url",
+      "id": "link3_url_6",
+      "label": "Link 6 URL"
+    },
+
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "youtube",
+      "label": "Youtube URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer",
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  function toggleFooter(headerDiv) {
+    let clickedColumn = headerDiv.parentElement;
+    let allColumns = document.getElementsByClassName('footer-column');
+    for (let i = 0; i < allColumns.length; i++) {
+     let column = allColumns[i];
+      let icon = column.querySelector('.toggle-icon');
+      if (column === clickedColumn) {
+        if (column.classList.contains('active')) {
+          column.classList.remove('active');
+          if (icon) icon.textContent = '+';
+        } else {
+          column.classList.add('active');
+          if (icon) icon.textContent = '−';
+        }
+      } else {
+        column.classList.remove('active');
+        if (icon) icon.textContent = '+';
+      }
+    }
+  }
+</script>

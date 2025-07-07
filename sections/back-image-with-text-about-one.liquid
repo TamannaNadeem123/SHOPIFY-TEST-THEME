@@ -1,0 +1,50 @@
+{{ 'back-image-with-text-about-one.css'|asset_url |stylesheet_tag }}
+<div class = "image-section-wrapper">
+  <div class ="back-image">
+    <img src= "{{ section.settings.BG_image |image_url: width: section.settings.BG_image.width, height: section.settings.BG_image.height }}">
+      </div>
+  <div class="content-details">
+    <div class="content">
+      <h2>{{ section.settings.heading }}</h2>
+      <p style="font-size:{{ section.settings.para_font_size }}px;">{{ section.settings.para_text |newline_to_br }}</p>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Back Image with text",
+    "settings": [
+      {
+        "type": "range",
+        "id": "para_font_size",
+        "label": "para font size",
+        "min":  12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+      },
+      {
+        "type": "image_picker",
+        "id": "BG_image",
+        "label": "Choose BG image for this section"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Text for Heading"
+      },
+        {
+        "type": "textarea",
+        "id": "para_text",
+        "label": "Enter Text for Desc"
+      }
+    ],
+    "presets": [
+      {
+        "name": "BACK IMAGE WITH TEXT ABOUT ONE"
+      }
+    ]
+    
+  }
+{% endschema %}

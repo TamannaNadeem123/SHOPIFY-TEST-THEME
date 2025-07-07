@@ -1,0 +1,193 @@
+{{ 'social-made-me-buy.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+<section class="section-style" style="background-color:{{ section.settings.background_color }}">
+  <div class="page-width">
+    <h2 class="section-headings">{{ section.settings.heading }}</h2>
+
+    <div class="swiper-container mySocialSwiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="video-promo-wrapper">
+              <div class="video-promo-block">
+                <video playsinline loop class="promo-video">
+                  <source src="{{ block.settings.video_url }}" type="video/mp4">
+                </video>
+                <button class="social-play-button">
+                  <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="21.5" fill="white" stroke="#3E6D3D" stroke-width="2"/>
+                    <path d="M17 15L30 22.5L17 30V15Z" fill="#3E6D3D"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="promo-social-content">
+                <div class="product-image-wrapper">
+                  <img src="{{ block.settings.image | image_url }}" alt="Product image">
+                </div>
+                <div class="social-product-info">
+                  <div class="info-top">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.85347 17.7119C4.10274 18.1887 3.14986 17.5217 3.34073 16.6531L4.32606 12.1693C4.40275 11.8203 4.28739 11.4569 4.02345 11.216L0.674561 8.15979C0.0325639 7.5739 0.39211 6.50438 1.25766 6.42529L5.5909 6.02934C5.96477 5.99518 6.28801 5.75448 6.4279 5.40609L8.07201 1.31126C8.40788 0.474725 9.59212 0.474725 9.92799 1.31126L11.5721 5.40609C11.712 5.75448 12.0352 5.99518 12.4091 6.02934L16.7423 6.42529C17.6079 6.50438 17.9674 7.5739 17.3254 8.15979L13.9765 11.216C13.7126 11.4569 13.5972 11.8203 13.6739 12.1693L14.6593 16.6531C14.8501 17.5217 13.8973 18.1887 13.1465 17.7119L9.53605 15.4193C9.20888 15.2116 8.79112 15.2116 8.46395 15.4193L4.85347 17.7119Z" fill="#3E6D3D"></path>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.85347 17.7119C4.10274 18.1887 3.14986 17.5217 3.34073 16.6531L4.32606 12.1693C4.40275 11.8203 4.28739 11.4569 4.02345 11.216L0.674561 8.15979C0.0325639 7.5739 0.39211 6.50438 1.25766 6.42529L5.5909 6.02934C5.96477 5.99518 6.28801 5.75448 6.4279 5.40609L8.07201 1.31126C8.40788 0.474725 9.59212 0.474725 9.92799 1.31126L11.5721 5.40609C11.712 5.75448 12.0352 5.99518 12.4091 6.02934L16.7423 6.42529C17.6079 6.50438 17.9674 7.5739 17.3254 8.15979L13.9765 11.216C13.7126 11.4569 13.5972 11.8203 13.6739 12.1693L14.6593 16.6531C14.8501 17.5217 13.8973 18.1887 13.1465 17.7119L9.53605 15.4193C9.20888 15.2116 8.79112 15.2116 8.46395 15.4193L4.85347 17.7119Z" fill="#3E6D3D"></path>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.85347 17.7119C4.10274 18.1887 3.14986 17.5217 3.34073 16.6531L4.32606 12.1693C4.40275 11.8203 4.28739 11.4569 4.02345 11.216L0.674561 8.15979C0.0325639 7.5739 0.39211 6.50438 1.25766 6.42529L5.5909 6.02934C5.96477 5.99518 6.28801 5.75448 6.4279 5.40609L8.07201 1.31126C8.40788 0.474725 9.59212 0.474725 9.92799 1.31126L11.5721 5.40609C11.712 5.75448 12.0352 5.99518 12.4091 6.02934L16.7423 6.42529C17.6079 6.50438 17.9674 7.5739 17.3254 8.15979L13.9765 11.216C13.7126 11.4569 13.5972 11.8203 13.6739 12.1693L14.6593 16.6531C14.8501 17.5217 13.8973 18.1887 13.1465 17.7119L9.53605 15.4193C9.20888 15.2116 8.79112 15.2116 8.46395 15.4193L4.85347 17.7119Z" fill="#3E6D3D"></path>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.85347 17.7119C4.10274 18.1887 3.14986 17.5217 3.34073 16.6531L4.32606 12.1693C4.40275 11.8203 4.28739 11.4569 4.02345 11.216L0.674561 8.15979C0.0325639 7.5739 0.39211 6.50438 1.25766 6.42529L5.5909 6.02934C5.96477 5.99518 6.28801 5.75448 6.4279 5.40609L8.07201 1.31126C8.40788 0.474725 9.59212 0.474725 9.92799 1.31126L11.5721 5.40609C11.712 5.75448 12.0352 5.99518 12.4091 6.02934L16.7423 6.42529C17.6079 6.50438 17.9674 7.5739 17.3254 8.15979L13.9765 11.216C13.7126 11.4569 13.5972 11.8203 13.6739 12.1693L14.6593 16.6531C14.8501 17.5217 13.8973 18.1887 13.1465 17.7119L9.53605 15.4193C9.20888 15.2116 8.79112 15.2116 8.46395 15.4193L4.85347 17.7119Z" fill="#3E6D3D"></path>
+                    </svg>
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.7964 7.59461C10.5189 6.90954 9.5 7.1081 9.5 7.84725V12.0595C9.5 12.3997 9.67291 12.7165 9.95899 12.9005L10.6179 13.3244C11.3674 13.8065 12.3256 13.1414 12.136 12.2706L11.9477 11.4059C11.8718 11.057 11.9876 10.6941 12.2517 10.4537L12.9261 9.83965C13.5684 9.2549 13.2111 8.18561 12.3463 8.10455L11.3572 8.01185C11.107 7.9884 10.8908 7.8275 10.7964 7.59461ZM5.35347 17.7119C4.60274 18.1887 3.64986 17.5217 3.84073 16.6531L4.82606 12.1693C4.90275 11.8203 4.78739 11.4569 4.52345 11.216L1.17456 8.15979C0.532564 7.5739 0.89211 6.50438 1.75766 6.42529L6.0909 6.02934C6.46477 5.99518 6.78801 5.75448 6.92789 5.40609L8.57201 1.31126C8.90788 0.474725 10.0921 0.474725 10.428 1.31126L12.0721 5.40609C12.212 5.75448 12.5352 5.99518 12.9091 6.02934L17.2423 6.42529C18.1079 6.50438 18.4674 7.5739 17.8254 8.15979L14.4765 11.216C14.2126 11.4569 14.0972 11.8203 14.1739 12.1693L15.1593 16.6531C15.3501 17.5217 14.3973 18.1887 13.6465 17.7119L10.036 15.4193C9.70888 15.2116 9.29112 15.2116 8.96395 15.4193L5.35347 17.7119Z" fill="#3E6D3D"></path>
+                    </svg>
+                    <span class="brand-name-handle">@{{ block.settings.handle }}</span>
+                  </div>
+                  <h3 class="product-title">{{ block.settings.heading }}</h3>
+                  <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="social-buttons mobile-only">
+        <div class="swiper-social-prev">
+          <svg width="28" height="28" viewBox="0 0 30 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.292893 7.29289C-0.0976314 7.68341 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.92893C7.68054 0.538406 7.04738 0.538406 6.65686 0.92893L0.292893 7.29289ZM30 7L1 7L1 9L30 9L30 7Z" fill="#3E6D3D"/>
+          </svg>
+        </div>
+        <div class="swiper-social-next">
+          <svg width="28px" height="28px" viewBox="0 0 30 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.7071 8.70711C30.0976 8.31658 30.0976 7.68342 29.7071 7.29289L23.3431 0.928932C22.9526 0.538408 22.3195 0.538408 21.9289 0.928932C21.5384 1.31946 21.5384 1.95262 21.9289 2.34315L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.70711ZM0 9H29V7H0V9Z" fill="#3E6D3D"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+{% schema %}
+{
+  "name": "Social Made Me Buy",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Social Made Me BUY It"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#e1eede"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "@Handle",
+          "default": "brandHandle"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Product Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Social Made Me Buy It"
+    }
+  ]
+}
+{% endschema %}
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  let buttons = document.getElementsByClassName("social-play-button");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      let currentButton = this;
+      let currentVideo = this.parentElement.querySelector("video");
+      let currentIcon = this.querySelector("svg");
+
+      let allVideos = document.getElementsByClassName("promo-video");
+      let allButtons = document.getElementsByClassName("social-play-button");
+
+      for (let j = 0; j < allVideos.length; j++) {
+        if (allVideos[j] !== currentVideo) {
+          allVideos[j].pause();
+          let otherIcon = allButtons[j].querySelector("svg");
+          otherIcon.innerHTML = `
+            <circle cx="22.5" cy="22.5" r="21.5" fill="white" stroke="#3E6D3D" stroke-width="2"/>
+            <path d="M17 15L30 22.5L17 30V15Z" fill="#3E6D3D"/>
+          `;
+        }
+      }
+
+      if (currentVideo.paused) {
+        currentVideo.play();
+        currentIcon.innerHTML = `
+          <circle cx="22.5" cy="22.5" r="21.5" fill="white" stroke="#3E6D3D" stroke-width="2"/>
+          <rect x="15" y="15" width="5" height="15" fill="#3E6D3D"/>
+          <rect x="25" y="15" width="5" height="15" fill="#3E6D3D"/>
+        `;
+      } else {
+        currentVideo.pause();
+        currentIcon.innerHTML = `
+          <circle cx="22.5" cy="22.5" r="21.5" fill="white" stroke="#3E6D3D" stroke-width="2"/>
+          <path d="M17 15L30 22.5L17 30V15Z" fill="#3E6D3D"/>
+        `;
+      }
+    });
+  }
+   
+const swiper = new Swiper(".mySocialSwiper", {
+    slidesPerView: 3,          
+    loop: true,           
+    navigation: {
+      nextEl: ".swiper-social-next",
+      prevEl: ".swiper-social-prev",
+    },
+    breakpoints: {
+       320: {
+        slidesPerView: 1,  
+         spaceBetween: 10,
+      },
+    },
+  });
+});
+</script>

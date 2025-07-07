@@ -1,0 +1,63 @@
+{{ 'feature-about-us.css' |asset_url |stylesheet_tag }}
+<div
+  class="feature-section"
+  style="background-color: {{ section.settings.BG_color }}"
+  ;
+>
+  <div class="description ">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description | newline_to_br }}</p>
+  </div>
+  <div class="feature-block">
+    {% for block in section.blocks %}
+      <img src="{{ block.settings.feature_image | image_url: width: block.settings.feature_image.width, height:block.settings.feature_image.height }}">
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Feature About Us",
+    "settings": [
+      {
+        "type": "color",
+        "id": "BG_color",
+        "label": "Choose BG color for this section"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Insert Heading for this section"
+      },
+
+        {
+        "type": "textarea",
+        "id": "description",
+        "label": "Insert Desc for this section"
+      },
+    ],
+    "blocks": [
+      {
+        "type": "content",
+        "name": "content",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "feature_image",
+            "label": "Choose feature image"
+          },
+           {
+            "type": "text",
+            "id": "feature_text",
+            "label": "Choose feature Text"
+          },
+        ]
+      }
+    ],
+"presets": [
+  {
+    "name": "FEATURE ABOUT US PAGE"
+  }
+]
+  }
+{% endschema %}
