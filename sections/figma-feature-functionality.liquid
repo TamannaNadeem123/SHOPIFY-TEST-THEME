@@ -1,6 +1,41 @@
+{{'figma-feature.css' |asset_url |stylesheet_tag}}
+{% assign my_product = all_products[section.settings.product] %}
+<div class ="figma-feature-section">
+   <div class ="thumbnails">
+      {% for image in my_product.images limit:5 %}
+        <img class="custom-thumbnail-img" src = "{{ image | img_url:'small' }}">
+      {% endfor %}
+    </div>
+  <div class ="product-image">
+    <img class="product-main-img" src ="{{ my_product.featured_image |img_url: 'medium' }}">  
+     </div>
+    <div class="content">
+      <h2 class ="product-info">{{ my_product.title }}</h2>
+      <div class="price">
+      <span class ="current-price">{{ my_product.price |money_with_currency }} </span>
+      {% if my_product.compare_at_price > my_product.price %}
+        <span class ="compare-price">{{ my_product.compare_at_price |money_with_currency }}</span>
+      {% endif %}
+      <div class ="discount-box">
+        <span class="offer-amount">30% OFF</span>
+    </div>
+    </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Figma Feature Section",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Select Product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Figma Feature Implementation"
+      }
+    ]
   }
 {% endschema %}
