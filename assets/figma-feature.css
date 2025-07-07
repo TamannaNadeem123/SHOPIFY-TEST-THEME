@@ -1,0 +1,61 @@
+.figma-feature-section{
+display: flex;
+  gap:20px;
+  align-items: flex-start;
+  padding:20px 90px;
+}
+.thumbnails{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+ 
+  align-self: center;
+ 
+}
+.custom-thumbnail-img{
+  width: 80px;
+  cursor: pointer;
+   border-radius:05px;
+}
+.product-image{
+  display:flex;
+  gap:20px;
+  
+}
+.product-main-img{
+  width:600px;
+   border-radius:25px;
+}
+.content{
+  display:flex;
+  flex-direction: column;
+}
+.price{
+ text-align: start;
+}
+.current-price{
+  font-weight: 700;
+  color:#329932;
+  font-size:20px;
+}
+.compare-price{
+  text-decoration: line-through;
+  color:rgb(210,210,210);
+  font-weight: bold;
+  margin-left:10px;
+  margin-right:10px;
+  font-size:20px;
+}
+.product-info{
+  font-weight:bold;
+  font-size:30px;
+}
+.discount-box{
+  background-color:#0b96c3;
+  border-radius: 6px;
+}
+.offer-amount{
+  font-size:13px;
+  color: white;
+  padding: 5px;
+}
