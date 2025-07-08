@@ -25,10 +25,10 @@ display: flex;
 }
 .product-main-img{
   width:600px;
-   border-radius:25px;
+   border-radius:5px;
 }
 .content{
-  padding-left:40px;
+  padding-left:30px;
   display:flex;
   flex-direction: column;
 }
