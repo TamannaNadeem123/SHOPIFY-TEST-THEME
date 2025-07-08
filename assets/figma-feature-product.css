@@ -1,9 +1,10 @@
 .figma-feature-section{
-  maegin-top:30px;
+  margin-top: 40px;
 display: flex;
-  gap:20px;
+  gap:40px;
   align-items: flex-start;
  justify-content: center;
+  margin-bottom: 20px;
 }
 .thumbnails{
   display: flex;
@@ -24,11 +25,11 @@ display: flex;
 }
 .product-main-img{
   width:600px;
-   border-radius:25px;
+   border-radius:5px;
 }
 .content{
+  padding-left:25px;
   display:flex;
- padding-left:40px;
   flex-direction: column;
 }
 .price{
@@ -43,8 +44,8 @@ display: flex;
   text-decoration: line-through;
   color:rgb(210,210,210);
   font-weight: bold;
-  margin-left:10px;
-  margin-right:10px;
+  margin-left:20px;
+  margin-right:20px;
   font-size:20px;
 }
 .product-info{
