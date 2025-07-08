@@ -1,11 +1,7 @@
 .figma-feature-section{
   margin-top: 40px;
 display: flex;
-<<<<<<< HEAD
   gap:39.85px;
-=======
-  gap:40px;
->>>>>>> 82a592df564338b56e3769241b7420dfecc569d8
   align-items: flex-start;
  justify-content: center;
   margin-bottom: 20px;
@@ -31,11 +27,7 @@ display: flex;
    border-radius:5px;
 }
 .content{
-<<<<<<< HEAD
-  padding-left:21.15px;
-=======
-  padding-left:25px;
->>>>>>> 82a592df564338b56e3769241b7420dfecc569d8
+  padding: left 21.15px;
   display:flex;
   flex-direction: column;
 }
