@@ -208,7 +208,7 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
                  {%- when 'custom-subscription-block' -%}
-                  {% render 'main-product-subscription', block: block %}
+                  {% comment %} {% render 'main-product-subscription', block: block %} {% endcomment %}
                  <h1>This is my block</h1>
           
               {%- when 'custom_liquid' -%}
@@ -727,7 +727,6 @@
     </script>
   </div>
 </product-info>
-{% section 'subscription-purchase-optionns' %}
 {% schema %}
 {
   "name": "t:sections.main-product.name",
