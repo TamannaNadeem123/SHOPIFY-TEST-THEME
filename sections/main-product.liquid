@@ -207,6 +207,10 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+                 {%- when 'custom-subscription-block' -%}
+                  {% render 'main-product-subscription', block: block %}
+                 <h1>This is my block</h1>
+          
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -723,7 +727,7 @@
     </script>
   </div>
 </product-info>
-
+{% section 'subscription-purchase-optionns' %}
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -931,6 +935,12 @@
           "default": "t:sections.main-product.blocks.share.settings.text.default"
         }
       ]
+    },
+    {
+      "type": "custom-subscription-block",
+      "name": "Subscribe & Save",
+      "limit": 3,
+      "settings":[]
     },
     {
       "type": "custom_liquid",

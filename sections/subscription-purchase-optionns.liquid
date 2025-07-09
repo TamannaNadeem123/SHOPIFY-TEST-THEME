@@ -1,0 +1,57 @@
+{% schema %}
+{
+    "name": "Subscription Options",
+    "blocks":[
+        {
+            "type":"header",
+            "name":"Subscribe Header",
+        },
+         {
+            "type":"benefits",
+            "name":"Benefits List",
+        },
+         {
+            "type":"frequency",
+            "name":"Delivery Frequency",
+        },
+          {
+            "type":"onetime",
+            "name":"Onetime Purchase",
+        },
+    ],
+    "presets":[
+        {
+            "name": "Subscription and Purchase Options",
+            "blocks":[
+                {
+                    "type": "header"
+                },
+                {
+                    "type": "benefits"
+                },
+                {
+                    "type": "frequency"
+                },
+                {
+                    "type": "onetime"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+<div class="purchase-options">
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'header' %}
+{% render 'subscription-purchase-header' %}
+{% when 'benefits' %}
+{% render 'subscription-purchase-benefits' %}
+{% when 'frequency' %}
+{% render 'subscription-purchase-frequency' %}
+{% when 'onetime' %}
+{% render 'subscription-purchase-onetime' %}
+{% endcase %}
+{% endfor %}
+</div>
