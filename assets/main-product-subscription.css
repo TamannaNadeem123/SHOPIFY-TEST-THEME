@@ -152,7 +152,7 @@
     .mobile-only-row-1{
         display:flex;
         align-items:center;
-        gap:20px;
+       justify-content: space-between;
     }
     .prices-mobile-only{
         display:flex;
