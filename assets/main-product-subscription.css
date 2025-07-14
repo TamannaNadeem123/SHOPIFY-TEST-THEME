@@ -143,12 +143,15 @@
     font-size:14px;
 }
 .header-heading {
+    font-size: 14px;
+}
+.offer-amount-block{
     margin-left: 16px;
-    font-weight: 700;
-    font-size: 18px;
+    margin-right:16px;
 }
 .product-price {
     font-size: 16px;
+    margin-right: 16px;
    
 }
 .compare-amount {
