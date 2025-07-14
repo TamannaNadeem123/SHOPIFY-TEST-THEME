@@ -1,5 +1,5 @@
 .subscription-box{
-    width:591px;
+    max-width:591PX;
     display:flex;
     flex-direction: column;
     border: 1px solid #CD603D;
@@ -10,7 +10,6 @@
     display:flex;
     margin-top:41px;
     align-items:center;
-    gap:18.75px;
     
 }
 .border-content{
@@ -43,26 +42,26 @@
     border-radius: 50%;
 }
 .header-heading{
+    margin-left:18px;
     font-weight:700;
     font-size: 18px;
 }
 
-.offer-amount{
+.offer-amount-block{
       background-color:#0b96c3;
     border-radius: 6px;
     color: white;
     font-size: 13px;
     margin-left: 18.75px;
     padding:5px;
+    margin-right:57.64px;
 }
 .product-price{
-    padding-left:57.64px;
+    margin-right:18px;
     font-size:20px;
     color: #008000;
 }
 .compare-amount{
-    padding-left:18px;
-    padding-right:35px;
     font-size:20px;
     text-decoration: line-through;
     color: #959595;
@@ -103,7 +102,7 @@
    stroke:#000000;
 }
 .purchase-options{
-    width: 591px;
+    max-width: 596px;
     display:flex;
     justify-content:space-between;
     align-items:center;
