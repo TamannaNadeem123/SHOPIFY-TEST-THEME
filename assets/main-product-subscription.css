@@ -1,5 +1,5 @@
 .subscription-box{
-    max-width:591PX;
+    max-width:591px;
     display:flex;
     flex-direction: column;
     border: 1px solid #CD603D;
@@ -54,7 +54,7 @@
     font-size: 13px;
     margin-left: 18.75px;
     padding:5px;
-    margin-right:57.64px;
+    margin-right:18.75px;
 }
 .product-price{
     margin-right:18px;
@@ -102,7 +102,7 @@
    stroke:#000000;
 }
 .purchase-options{
-    max-width: 596px;
+    max-width:596px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -133,4 +133,46 @@
 .one-time-price{
     padding-right:28.35px;
     font-size:20px;
+}
+@media screen and (max-width:768px) {
+.purchase-options-content input[type="radio"]{
+ width:12px;
+    height:12px;
+}
+.feature-list li p {
+    font-size:14px;
+}
+.header-heading {
+    margin-left: 16px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.product-price {
+    font-size: 16px;
+   
+}
+.compare-amount {
+    font-size: 16px;
+}
+.subscription-header input[type="radio"]{
+    width:19px;
+    height:15px;
+}
+.subscription-header input[type="radio"]:checked::before{
+padding: 3px;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 1px; 
+    width: 2px;
+    height: 2px;
+    background-color: #efb738;
+    border-radius: 50%;
+}
+.one-time-purchase{
+    font-size:14px;
+}
+.one-time-price{
+    font-size:16px;
+}
 }
