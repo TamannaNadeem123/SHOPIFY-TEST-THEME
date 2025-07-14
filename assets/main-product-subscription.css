@@ -1,5 +1,5 @@
 .subscription-box{
-    max-width:591px;
+    width:591px;
     display:flex;
     flex-direction: column;
     border: 1px solid #CD603D;
@@ -103,6 +103,7 @@
    stroke:#000000;
 }
 .purchase-options{
+    width: 591px;
     display:flex;
     justify-content:space-between;
     align-items:center;
