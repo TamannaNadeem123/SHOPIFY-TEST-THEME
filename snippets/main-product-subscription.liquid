@@ -1,6 +1,6 @@
 {{'main-product-subscription.css' |asset_url |stylesheet_tag}}
 <div class = "subscription-box">
-  <div class = "subscription-header">
+  <div class = "subscription-header desktop-only">
         <input type="radio" id = "subscribe" name="subscription-option" checked>
         <span class="radio-circle"></span>
         <div class="border-content">
@@ -11,24 +11,40 @@
     {% if product.compare_at_price > product.price %}
       <span class="compare-amount">{{ product.compare_at_price | money }}</span>
     {% endif %}
+    </div>
       </div>
       </div>
-      </div>
+   <div class="subscription-header mobile-only">
+      <div class="mobile-only-row-1">
+   <input type="radio" id = "subscribe" name="subscription-option" checked>
+        <span class="radio-circle"></span>
+    <h3 class="header-heading"> Subscribe & Save </h3>
+  <span class="offer-amount-block">30% off </span>
+  </div>
+  <div class="prices-mobile-only">
+    <span class="product-price">{{ product.price | money }}</span>
+    {% if product.compare_at_price > product.price %}
+      <span class="compare-amount">{{ product.compare_at_price | money }}</span>
+    {% endif %}
+    </div>
+    </div>
+    
+
   <ul class = "feature-list">
    <li> 
-    <img src = "{{'Group 143373.png' | asset_url}}" >
+    <img src = "{{'Group 143373.svg' | asset_url}}" >
     <p>Save 30% now and 15% on repeat deliveries</p>
     </li>
     <li>
-        <img src = "{{'Group 143373.png' | asset_url}}" >
+        <img src = "{{'Group 143373.svg' | asset_url}}" >
       <p> Cancel, skip & change anytime </p> 
     </li>
     <li>
-        <img src = "{{'Group 143373.png' | asset_url}}" >
+        <img src = "{{'Group 143373.svg' | asset_url}}" >
         <p> Free shipping on every order </p>
     </li>
     <li>
-        <img src = "{{'Group 143373.png' | asset_url}}"  >
+        <img src = "{{'Group 143373.svg' | asset_url}}"  >
         <p> Satisfaction guaranteed </p>
     </li>
   </ul>

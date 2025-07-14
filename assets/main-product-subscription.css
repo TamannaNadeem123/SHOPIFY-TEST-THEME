@@ -134,32 +134,50 @@
     padding-right:28.35px;
     font-size:20px;
 }
+.desktop-only{
+    display:flex;
+}
+.mobile-only{
+    display:none;
+}
 @media screen and (max-width:768px) {
+    .desktop-only{
+        display:none;
+
+    }
+    .mobile-only{
+        display:block;
+        border-bottom: 1px solid #CD603D;
+    }
+    .mobile-only-row-1{
+        display:flex;
+        align-items:center;
+        gap:20px;
+    }
+    .prices-mobile-only{
+        display:flex;
+        gap:30px;
+       align-items:center;
+       padding-left: 35px;
+    }
+    .header-heading{
+        margin-left:0px;
+    }
+    .offer-amount-block {
+        margin-left:0px;
+    }
 .purchase-options-content input[type="radio"]{
  width:12px;
     height:12px;
 }
+
 .feature-list li p {
     font-size:14px;
 }
-.header-heading {
-    font-size: 14px;
-}
-.offer-amount-block{
-    margin-left: 16px;
-    margin-right:16px;
-}
-.product-price {
-    font-size: 16px;
-    margin-right: 16px;
-   
-}
-.compare-amount {
-    font-size: 16px;
-}
+
 .subscription-header input[type="radio"]{
-    width:19px;
-    height:15px;
+    width: 15px;
+    height:14px;
 }
 .subscription-header input[type="radio"]:checked::before{
 padding: 3px;
