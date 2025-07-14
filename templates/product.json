@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -10,13 +19,25 @@
             "text_style": "uppercase"
           }
         },
-        "title": { "type": "title", "settings": {} },
-        "price": { "type": "price", "settings": {} },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
-          "settings": { "picker_type": "button", "swatch_shape": "circle" }
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
         },
-        "quantity_selector": { "type": "quantity_selector", "settings": {} },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -24,8 +45,20 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": { "type": "description", "settings": {} },
-        "share": { "type": "share", "settings": { "share_label": "Share" } }
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "custom_subscription_block_Afwipm": {
+          "type": "custom-subscription-block",
+          "settings": {}
+        }
       },
       "block_order": [
         "vendor",
@@ -35,7 +68,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "custom_subscription_block_Afwipm"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -43,7 +77,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -70,7 +104,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_gallery_WpkxJh": {
+      "type": "product-gallery",
+      "name": "Figma Feature Product Implementation",
+      "settings": {}
     }
   },
-  "order": ["main", "related-products"]
+  "order": [
+    "main",
+    "related-products",
+    "product_gallery_WpkxJh"
+  ]
 }
