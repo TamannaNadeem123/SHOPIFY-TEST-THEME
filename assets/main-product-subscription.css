@@ -1,0 +1,135 @@
+.subscription-box{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #CD603D;
+    border-radius:8px;
+}
+
+.subscription-header{
+    display:flex;
+    margin-top:41px;
+    align-items:center;
+    gap:18.75px;
+    
+}
+.border-content{
+    display:flex;
+    align-items:center;
+      border-bottom: 1px solid #CD603D;
+     
+}
+
+.subscription-header input[type="radio"]{
+    margin-left:35px;
+    appearance: none;
+    width:25px;
+    height:26px;
+    border-radius: 50%;
+    background-color:white;
+    border: 2px solid #EFB738;
+    position: relative;
+    cursor: pointer;
+}
+.subscription-header input[type="radio"]:checked::before{
+    padding:5px;
+    content: "";
+    position:absolute;
+    top:3px;
+    left:3px;
+    width:15px;
+    height:16px;
+    background-color:#EFB738; 
+    border-radius: 50%;
+}
+.header-heading{
+    font-weight:700;
+    font-size: 18px;
+}
+
+.offer-amount{
+      background-color:#0b96c3;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    margin-left: 18.75px;
+    padding:5px;
+}
+.product-price{
+    padding-left:57.64px;
+    font-size:20px;
+    color: #008000;
+}
+.compare-amount{
+    padding-left:18px;
+    padding-right:35px;
+    font-size:20px;
+    text-decoration: line-through;
+    color: #959595;
+}
+.feature-list{
+     margin-top:24px;
+    list-style-type: none;
+}
+.feature-list li{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+.feature-list li img {
+    object-fit: contain;
+}
+.feature-list li p {
+    font-size:16px;
+    color: 000000;
+}
+.custom-select-wrapper{
+    border: 1px solid #222222;
+    margin-left:36px;
+    margin-right:35px;
+    border-radius:12px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:27px;
+}
+.select-content{
+    font-size:16px;
+    padding-left: 29.75px;
+    color: #222222;
+}
+.drop-down-icon{
+    padding:19.64px;
+   stroke:#000000;
+}
+.purchase-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28.73px 0px;
+    border: 1px solid rgba(205,96,61, 0.4);
+    margin-top:22px;
+    border-radius: 8px;
+}
+.purchase-options-content{
+    display:flex;
+    align-items:center;
+    gap:21.72px;
+}
+.purchase-options-content input[type="radio"]{
+    margin-left:35px;
+    appearance: none;
+    width:19.49px;
+    height:19.49px;
+    border-radius: 50%;
+    background-color:white;
+    border: 2px solid #EFB738;
+    position: relative;
+    cursor: pointer;
+}
+.one-time-purchase{
+    font-size:18px;
+}
+.one-time-price{
+    padding-right:28.35px;
+    font-size:20px;
+}

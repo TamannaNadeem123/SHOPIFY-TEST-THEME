@@ -208,8 +208,8 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
                  {%- when 'custom-subscription-block' -%}
-                  {% comment %} {% render 'main-product-subscription', block: block %} {% endcomment %}
-                 <h1>This is my block</h1>
+                  {% render 'main-product-subscription', block: block %} 
+               
           
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}

@@ -3,14 +3,16 @@
   <div class = "subscription-header">
         <input type="radio" id = "subscribe" name="subscription-option" checked>
         <span class="radio-circle"></span>
-    <h3> Subscribe & Save </h3>
-  <div class="discount-box">
-  <span>30% off </span>
-    <span class="price">{{ product.price }}</span>
+        <div class="border-content">
+    <h3 class="header-heading"> Subscribe & Save </h3>
+  <div class="discount-offer">
+  <span class="offer-amount">30% off </span>
+    <span class="product-price">{{ product.price | money }}</span>
     {% if product.compare_at_price > product.price %}
-      <span class="compare-price">{{ product.compare_at_price }}</span>
+      <span class="compare-amount">{{ product.compare_at_price | money }}</span>
     {% endif %}
-  </div>
+      </div>
+      </div>
       </div>
   <ul class = "feature-list">
    <li> 
@@ -31,16 +33,18 @@
     </li>
   </ul>
   <div class = "custom-select-wrapper">
-  Deliver every 4 weeks
+  <p class="select-content"> Deliver every 4 weeks </p>
   <span class = "drop-down-icon">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M7 10l5 5 5-5" stroke="#666" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7 10l5 5 5-5" stroke="#000000" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
   </span>
     </div>
-    <div class ="purchase-options">
-        <input type="radio" id ="onetime" name ="purchase">
-        <label for="onetime" class="visually-hidden">One-Time Purchase</label>
-        <span class ="price">{{product.compare_at_price}}</span>
     </div>
-</div>
+    <div class ="purchase-options">
+    <div class="purchase-options-content">
+        <input type="radio" id ="onetime" name ="purchase">
+        <label for="onetime" class="one-time-purchase">One-Time Purchase</label>
+        </div>
+        <span class ="one-time-price">{{product.compare_at_price |money}}</span>
+    </div>
