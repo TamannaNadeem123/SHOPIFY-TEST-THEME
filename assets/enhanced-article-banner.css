@@ -34,7 +34,8 @@
   background-color: #C9C9C9;
 }
 .card-background{
-margin: 15..25px 27.62px  138.74px 27.62px;
+  display:flex;
+margin: 15..25px 27.62px;
   background-color: white;
 }
 .card-image{
