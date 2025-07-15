@@ -6,7 +6,10 @@
   <div class="blocks-container">
     {% for block in section.blocks %}
       <div class = "article-card"
-        style="background-image: url('{{ block.settings.back_image | image_url: width:block.settings.back_image.width , height: block.settings.back_image.height }}')">
+        style="background-image: url('{{ block.settings.back_image | image_url: width:block.settings.back_image.width , height: block.settings.back_image.height }}');
+        background-size: cover;
+        background-repeat: no-repeat";
+        >
         <a href="{{ block.settings.learn_button }}">{{ block.settings.article_learn_text }} </a>
         <p class = "card-title">{{ block.settings.article_title |newline_to_br }}</p>
         <a href="{{ block.settings.article_button }}">{{ block.settings.article_button_text }} </a>
