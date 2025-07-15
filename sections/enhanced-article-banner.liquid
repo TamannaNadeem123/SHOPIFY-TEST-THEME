@@ -1,6 +1,28 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "card_image",
+        "label": "choose image for this card"
+      },
+      {
+        "type": "textarea",
+        "id": "card_text",
+        "label": "Enter text for this card"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Choose Text for this Button",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Paste Link to open when user click this Button",
+      },
+    ]
   }
 {% endschema %}
