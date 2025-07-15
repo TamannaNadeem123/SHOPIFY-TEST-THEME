@@ -7,6 +7,7 @@
   align-items: center;
 }
 .article-card{
+  overflow: hidden;
   width: 33.33%;
   border-radius: 18px;
   max-width: 353.25px;
@@ -27,7 +28,6 @@
     rgba(49,49,49,0.0) 0%,    
     rgba(49,49,49,0.5) 50%,    
     rgba(0,0,0,0.7) 100% 
- 
     );
 }
 .learn-button{
