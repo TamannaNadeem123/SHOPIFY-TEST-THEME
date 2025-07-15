@@ -16,6 +16,10 @@
 
 }
 .learn-button{
+  position: absolute;
+  top:3%;
+  left:3%;
+  z-index: 1;
   padding: 10px 24px;
   background-color: #D4F897;
   font-size: 15px;
