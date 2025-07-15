@@ -12,8 +12,7 @@
     <div class="block-right-column-card">
       <div class="card-background">
         <div class="card-image">
-          <img src ="{{ product.featured_image |img_url: 'medium'  }}">
-        
+          <img src="{{ block.settings.card_image |image_url: width: block.settings.card_image.width, height: block.settings.card_image.height }}">
         </div>
       </div>
       <p class="card-text">{{ block.settings.card_text }}</p>
