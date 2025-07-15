@@ -52,6 +52,23 @@
   font-weight: 600;
   text-decoration: none;
 }
+.MYSwiper {
+  position:relative !important;
+    max-width: 100% !important;
+    overflow:hidden!important;
+}
+
+.MYSwiper .swiper-wrapper {
+    display: flex !important;
+}
+.nav--buttons{
+  display:flex;
+  gap:15px;
+}
+.MYSwiper .swiper-slide {
+    display: flex !important;
+   width: auto;
+}
 .card-title{
   font-size: 25px;
   font-weight: 700;
