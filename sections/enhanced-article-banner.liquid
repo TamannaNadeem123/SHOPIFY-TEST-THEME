@@ -10,8 +10,10 @@
         <p class="left-column-content">{{ block.settings.Kratom_para }}</p>
       </div>
     <div class="block-right-column-card">
-      <div class="card-background">
-    <img class="card-main-img" src ="{{ product.im |img_url: 'medium' }}">  
+     <div class="card-background">
+        <div class="card-image">
+          <img src="{{ block.settings.card_image |image_url: width: block.settings.card_image.width, height: block.settings.card_image.height }}">
+        </div>
       </div>
       <p class="card-text">{{ block.settings.card_text }}</p>
       <a href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
