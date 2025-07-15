@@ -1,6 +1,50 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Read Related Articles",
+    "settings": [
+      {
+        "type": "text",
+        "id": "articles_heading",
+        "label": "Enter Text for Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "article-card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "back_image",
+            "label": "Choose Bg Image for Article",
+          },
+           {
+            "type": "textarea",
+            "id": "article_title",
+            "label": "Enter title for article",
+          },
+           {
+            "type": "url",
+            "id": "article_button",
+            "label": "Enter Link for article",
+          },
+           {
+            "type": "text",
+            "id": "article_button_text",
+            "label": "Enter Text for button",
+          },
+          {
+            "type": "url",
+            "id": "learn_button",
+            "label": "Enter Link for Learn Button",
+          },
+           {
+            "type": "text",
+            "id": "learn_text",
+            "label": "Enter Text for Learn button",
+          },
+        ]
+      }
+    ]
   }
 {% endschema %}
