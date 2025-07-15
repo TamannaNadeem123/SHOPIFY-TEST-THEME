@@ -34,8 +34,11 @@
     </div>
       </div>
       </div>
+  
   <div class="blocks-container">
+      <div class="wrapper">
     {% for block in section.blocks %}
+      <div class = "swiper-slide">
       <div class = "article-card"
         style="background-image: url('{{ block.settings.back_image | image_url: width:block.settings.back_image.width , height: block.settings.back_image.height }}');
         background-size: cover;
@@ -46,11 +49,12 @@
         <p class = "card-title">{{ block.settings.article_title |newline_to_br }}</p>
         <a class="read-button" href="{{ block.settings.article_button }}">{{ block.settings.article_button_text }} </a>
       </div>
+         </div>
       {% endfor %}
   </div>
 </div>
 </div>
-
+      </div>
 
 {% schema %}
   {
