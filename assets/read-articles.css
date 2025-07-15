@@ -52,12 +52,12 @@
 }
 
 .MYSwiper .swiper-wrapper {
-      max-width: 1200px;
-  background-color: #F3F3F3;
-  margin: 0 auto;
-  display:flex;
-    gap: 16.4px;
-  align-items: center;
+      max-width: 1200px !important;
+  background-color: #F3F3F3 !important;
+  margin: 0 auto !important;
+  display:flex !important;
+    gap: 16.4px !important;
+  align-items: center !important;
 }
 .nav-buttons{
   display:flex;
@@ -65,14 +65,13 @@
 }
  .swiper-slide {
    overflow: hidden;
-  width: 33.33%;
   border-radius: 18px;
   max-width: 353.25px;
   height: 437.89px;
   position: relative;
   z-index:0;
     display: flex !important;
-   width: auto !important;;
+
 }
 .card-title{
   font-size: 25px;
