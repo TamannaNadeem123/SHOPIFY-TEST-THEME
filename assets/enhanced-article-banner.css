@@ -76,6 +76,7 @@ margin: 15..25px 27.62px;
   }
   .flex-columns{
     flex-direction: column;
+    gap:10px;
   }
   block-right-column-card{
     width:100%;
@@ -95,6 +96,6 @@ margin: 15..25px 27.62px;
   max-width: 484.86px !important;
     }
   .card-text{
-  font-size:24px;
+  font-size:18px;
   }
 }
