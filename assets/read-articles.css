@@ -1,9 +1,12 @@
 .blocks-container{
   display:flex;
+    gap: 16.4px;
+  align-items: center;
 }
 .article-card{
   width: 33.33%;
   border-radius: 18px;
   max-width: 353.25px;
   height: 437.89px;
+
 }
