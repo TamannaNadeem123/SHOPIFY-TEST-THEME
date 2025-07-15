@@ -94,4 +94,7 @@ margin: 15..25px 27.62px;
     width:188px;
   max-width: 484.86px !important;
     }
+  .card-text{
+  font-size:24px;
+  }
 }
