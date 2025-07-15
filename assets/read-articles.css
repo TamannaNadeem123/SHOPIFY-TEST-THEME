@@ -37,6 +37,9 @@
   left:3%;
 }
 .read-button{
+  position:absolute;
+  bottom:3%;
+  left:3%;
   padding: 10px 24px;
   font-size:18px;
   color: #000000;
