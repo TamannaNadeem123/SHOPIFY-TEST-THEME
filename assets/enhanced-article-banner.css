@@ -6,7 +6,9 @@
   font-weight:700px;
   letter-spacing: 1.5%;
 }
-
+.block-left-column{
+  width:50%;
+}
 .flex-columns{
   display:flex;
   align-items: center;
