@@ -61,7 +61,7 @@
 .MYSwiper .swiper-wrapper {
     display: flex !important;
 }
-.nav--buttons{
+.nav-buttons{
   display:flex;
   gap:15px;
 }
