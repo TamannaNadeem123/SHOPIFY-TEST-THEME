@@ -1,3 +1,19 @@
+.swiper .custom-my-swiper{
+  over-flow: hidden !important;
+   position:relative !important;
+    max-width: 100% !important;
+  
+}
+.custom-my-swiper .swiper-wrapper {
+    display: flex !important;
+}
+.custom-my-swiper .swiper-slide {
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 5px !important;
+}
+
 .article-header{
     max-width: 1200px;
   margin: 0 auto;
