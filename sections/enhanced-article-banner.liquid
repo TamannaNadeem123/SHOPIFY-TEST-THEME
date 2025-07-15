@@ -11,7 +11,7 @@
       </div>
     <div class="block-right-column-card">
       <div class="card-background">
-    <img class="card-main-img" src ="{{ product.featured_image |img_url: 'medium' }}">  
+    <img class="card-main-img" src ="{{ product.images |img_url: 'medium' }}">  
       </div>
       <p class="card-text">{{ block.settings.card_text }}</p>
       <a href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
@@ -47,7 +47,7 @@
         "id": "Kratom_para",
         "label": "Enter Paragraph text for this section"
       },
-      
+      { "type": "product", "id": "card_product", "label": "Choose a product" },
       {
         "type": "image_picker",
         "id": "card_image",
