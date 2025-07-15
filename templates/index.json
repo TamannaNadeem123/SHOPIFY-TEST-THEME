@@ -528,6 +528,13 @@
       "settings": {
         "modus_heading": "Favorites from Modus Life"
       }
+    },
+    "read_related_articles_gLwHJd": {
+      "type": "read-related-articles",
+      "name": "Read Related Articles",
+      "settings": {
+        "articles_heading": "READ RELATED ARTICLES"
+      }
     }
   },
   "order": [
@@ -541,6 +548,7 @@
     "blog_DrLtnX",
     "social_made_me_buy_WmbUx9",
     "newsletter_good_clean_love_a7UfeL",
-    "enhanced_article_banner_Kj4dYW"
+    "enhanced_article_banner_Kj4dYW",
+    "read_related_articles_gLwHJd"
   ]
 }
