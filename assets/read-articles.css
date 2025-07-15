@@ -1,7 +1,11 @@
+.article-header{
+    max-width: 1200px;
+  margin: 0 auto;
+}
 .header-heading{
   font-size: 50px;
   font-weight:700;
-   margin: 0 auto;
+
 }
 
 
