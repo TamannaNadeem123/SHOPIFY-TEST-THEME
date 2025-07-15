@@ -15,3 +15,10 @@
   z-index:0;
 
 }
+.learn-button{
+  padding: 10px 24px;
+  background-color: #D4F897;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
