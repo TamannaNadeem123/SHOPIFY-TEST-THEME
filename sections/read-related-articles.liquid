@@ -2,6 +2,20 @@
 <div class = "read-article-section ">
   <div class="article-header">
     <h2 class="header-heading">{{ section.settings.articles_heading }}</h2>
+    <div class="nav-buttons">
+      <div class="nav-next-button">
+        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="30" cy="30" r="30" fill="#313131"/>
+      <path d="M24 22 L36 30 L24 38" stroke="#FFFFFF" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    </div>
+      <div class="nav-previous-button">
+        <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="30" cy="30" r="30" fill="#313131"/>
+      <path d="M36 22 L24 30 L36 38" stroke="#FFFFFF" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
   </div>
   <div class="blocks-container">
     {% for block in section.blocks %}
