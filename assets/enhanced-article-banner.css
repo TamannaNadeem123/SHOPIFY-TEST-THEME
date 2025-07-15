@@ -12,3 +12,7 @@
   align-items: center;
   gap:102px;
 }
+
+.block-right-column-card{
+  background-color: #C9C9C9;
+}
