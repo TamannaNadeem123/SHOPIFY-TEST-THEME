@@ -301,81 +301,6 @@
       "name": "background-with-content",
       "settings": {}
     },
-    "testimonials_WJei6A": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_FKeVt4": {
-          "type": "testimonial",
-          "settings": {
-            "review": "This is the best lube we ever used. It's like\nsilk! We never have sex without it!",
-            "author": "Patricia S."
-          }
-        },
-        "testimonial_7XUWVP": {
-          "type": "testimonial",
-          "settings": {
-            "review": "I love this lube. I love that it's water based, glycerin free, low pH, and has simple and clean ingredients.\nHas a great feel and agrees with me. I've found it to be a great lube as someone who's become more sensitive and vulnerable to a disrupted vaginal X icrobiome as I approach/enter perimenopause.\nThanks for a great product!",
-            "author": "Ashley E."
-          }
-        },
-        "testimonial_BgcATM": {
-          "type": "testimonial",
-          "settings": {
-            "review": "We love this lubricant. \nOur go to from now on!!",
-            "author": "Deb G"
-          }
-        },
-        "testimonial_EB4YVc": {
-          "type": "testimonial",
-          "settings": {
-            "review": "Love these products. I've been using them for a month now. Being in perimenopause has really changed things for me. These products help bring me ack. Love them. They were recommended by my Doctor to help with dryness, PH off balance, and overall good clean love ❤️.",
-            "author": "Colleen J."
-          }
-        },
-        "testimonial_9wHd6q": {
-          "type": "testimonial",
-          "settings": {
-            "review": "This brand was recommended by my GYN. I decided Pa to purchase several items. I don't have an issue with BV (some women use this for that). I decided to get it to use after my menses. I do feel \"cleaner/fresher\". I am highly sensitive and I haven't had any problems.",
-            "author": "Shannon Q."
-          }
-        },
-        "testimonial_GpdN3M": {
-          "type": "testimonial",
-          "settings": {
-            "review": "These are a lifesaver. Usually I use boric acid suppositories when I notice BV coming on but since trying to conceive and now becoming pregnant, I haven't been able to. I switched to these probiotica ones and they work like a charm! I honestly can't tell if they work better than boric acid because my hormones have obviously shifted, but overall I haven't had to use them as often. It's been a constant struggle for the past several years, unfortunately. But they definitely work!",
-            "author": "Joanna B."
-          }
-        },
-        "testimonial_arFkcU": {
-          "type": "testimonial",
-          "settings": {
-            "review": "I love the Relief Gel with Lidocaine!!! My only regret is that I didn't find out about it sooner!!! I recommend this to anyone that has been suffering from post menopausal symptoms of burning and extreme itching. I've tried other products before and this is by far the BEST!!!",
-            "author": "Morgan C."
-          }
-        },
-        "testimonial_PynHrj": {
-          "type": "testimonial",
-          "settings": {
-            "review": "Your lubricant and the life-changing pelvic floor physiotherapy I've recently received has enabled me to resume my \"dead\" sex life. My PT gave me samples and recommended your products and I am forever grateful to you all! Bravo for making such a wonderful product.",
-            "author": "Marcia H."
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_FKeVt4",
-        "testimonial_7XUWVP",
-        "testimonial_BgcATM",
-        "testimonial_EB4YVc",
-        "testimonial_9wHd6q",
-        "testimonial_GpdN3M",
-        "testimonial_arFkcU",
-        "testimonial_PynHrj"
-      ],
-      "name": "Testimonials Slider",
-      "settings": {
-        "section_image": "shopify://shop_images/testimonial_slider_bg.png"
-      }
-    },
     "blog_DrLtnX": {
       "type": "blog",
       "blocks": {
@@ -529,98 +454,51 @@
         "modus_heading": "Favorites from Modus Life"
       }
     },
-    "read_related_articles_gLwHJd": {
-      "type": "read-related-articles",
+    "read_related_articles_without_swiper_8FjFhc": {
+      "type": "read-related-articles-without-swiper",
       "blocks": {
-        "text_iBQwxK": {
+        "text_8AHqMH": {
           "type": "text",
           "settings": {
             "back_image": "shopify://shop_images/image_1e75fa6c-a170-48b1-b45e-e8dd74e16326.png",
             "article_title": "Kratom & Alcohol: \nEverything You\n Need To Know",
             "article_button": "",
-            "article_button_text": "Read Now",
+            "article_button_text": "Read more",
             "learn_button": "",
             "learn_text": "Learn"
           }
         },
-        "text_9qbJCe": {
+        "text_mNRdkm": {
           "type": "text",
           "settings": {
             "back_image": "shopify://shop_images/image_1_d3983b5a-1732-441e-9a1b-a91be8ce12d7.png",
             "article_title": "7OH vs \nPseudoindoxyl \nvs OG Kratom",
             "article_button": "",
-            "article_button_text": "Read now",
+            "article_button_text": "Read more",
             "learn_button": "",
             "learn_text": "Learn"
           }
         },
-        "text_PBewzy": {
+        "text_fdLdcR": {
           "type": "text",
           "settings": {
             "back_image": "shopify://shop_images/image_2_e6614421-8a96-4a24-892d-18168a741054.png",
             "article_title": "Decoding Kratom \nLegality: A State \nBy State Guide",
             "article_button": "",
-            "article_button_text": "Read now",
+            "article_button_text": "Read more",
             "learn_button": "",
             "learn_text": "Learn"
           }
         }
       },
       "block_order": [
-        "text_iBQwxK",
-        "text_9qbJCe",
-        "text_PBewzy"
+        "text_8AHqMH",
+        "text_mNRdkm",
+        "text_fdLdcR"
       ],
       "name": "Read Related Articles",
       "settings": {
         "articles_heading": "Read related articles"
-      }
-    },
-    "read_related_articles_swiper_Y4UkRD": {
-      "type": "read-related-articles-swiper",
-      "blocks": {
-        "text_N8iHgJ": {
-          "type": "text",
-          "settings": {
-            "back_image": "shopify://shop_images/image_1e75fa6c-a170-48b1-b45e-e8dd74e16326.png",
-            "article_title": "Kratom & Alcohol: \nEverything You\n Need To Know",
-            "article_button": "",
-            "article_button_text": "Read more",
-            "learn_button": "",
-            "learn_text": "Learn"
-          }
-        },
-        "text_rpxk9g": {
-          "type": "text",
-          "settings": {
-            "back_image": "shopify://shop_images/image_1_d3983b5a-1732-441e-9a1b-a91be8ce12d7.png",
-            "article_title": "7OH vs \nPseudoindoxyl \nvs OG Kratom",
-            "article_button": "",
-            "article_button_text": "Read more",
-            "learn_button": "",
-            "learn_text": "Learn"
-          }
-        },
-        "text_H6rpAP": {
-          "type": "text",
-          "settings": {
-            "back_image": "shopify://shop_images/image_2_e6614421-8a96-4a24-892d-18168a741054.png",
-            "article_title": "Decoding Kratom \nLegality: A State \nBy State Guide",
-            "article_button": "",
-            "article_button_text": "Read more",
-            "learn_button": "",
-            "learn_text": "Learn"
-          }
-        }
-      },
-      "block_order": [
-        "text_N8iHgJ",
-        "text_rpxk9g",
-        "text_H6rpAP"
-      ],
-      "name": "Read Related Articles Swiper",
-      "settings": {
-        "articles_heading": "Real related articles"
       }
     }
   },
@@ -631,12 +509,10 @@
     "sliding_image_gallery_JzAcK3",
     "best_sellers_RTXynh",
     "background_video_with_text_C4qWDQ",
-    "testimonials_WJei6A",
     "blog_DrLtnX",
     "social_made_me_buy_WmbUx9",
     "newsletter_good_clean_love_a7UfeL",
     "enhanced_article_banner_Kj4dYW",
-    "read_related_articles_gLwHJd",
-    "read_related_articles_swiper_Y4UkRD"
+    "read_related_articles_without_swiper_8FjFhc"
   ]
 }
