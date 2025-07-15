@@ -9,6 +9,11 @@
 .block-left-column{
   width:50%;
 }
+.left-column-heading{
+  font-size:38px;
+  letter-spacing: 1.5;
+  font-weight:700px;
+}
 .flex-columns{
   display:flex;
   align-items: center;
