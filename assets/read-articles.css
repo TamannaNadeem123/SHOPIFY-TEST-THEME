@@ -30,6 +30,7 @@
 }
 .card-title{
   font-size: 25px;
+  font-weight: 700;
   color:white;
   position:absolute;
   z-index:1;
