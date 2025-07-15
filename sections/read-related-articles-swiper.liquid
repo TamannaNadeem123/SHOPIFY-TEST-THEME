@@ -117,5 +117,34 @@
         nextEl: ".nav-next-button",
         prevEl: ".nav-previous-button",
       },
-    });
+       breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    },
+    on: {
+      init: checkNextButton,
+      slideChange: checkNextButton,
+      resize: checkNextButton,
+    }
+  });
+  function checkNextButton() {
+    const nextBtn = document.querySelector('.swiper-button-custom-next');
+    const currentIndex = swiper.activeIndex;
+    const totalSlides = swiper.slides.length;
+
+
+    let slidesToShow = window.innerWidth <= 480 ? 1 : 4;
+
+    const lastIndex = totalSlides - slidesToShow;
+
+    if (currentIndex >= lastIndex) {
+      nextBtn.style.pointerEvents = "none";
+ 
+    } else {
+      nextBtn.style.pointerEvents = "auto";
+      nextBtn.style.opacity = "1";
+    }
+  }
   </script>
