@@ -11,5 +11,7 @@
   border-radius: 18px;
   max-width: 353.25px;
   height: 437.89px;
+  position: relative;
+  z-index:0;
 
 }
