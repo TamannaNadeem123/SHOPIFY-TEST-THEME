@@ -6,7 +6,7 @@
   font-weight:700px;
   letter-spacing: 1.5%;
 }
-.modus-blocks{
+
+.flex-columns{
   display:flex;
-  flex-direction: column;
 }
