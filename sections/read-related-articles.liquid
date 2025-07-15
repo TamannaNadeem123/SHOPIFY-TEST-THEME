@@ -1,3 +1,22 @@
+
+<div class = "read-article-section">
+  <div class="header">
+    <h2>{{ section.settings.articles_heading }}</h2>
+  </div>
+  <div class="blocks-container">
+    {% for block in section.blocks %}
+      <div class = "article-card"
+        style="background-image">
+        <a href="{{ block.settings.learn_button }}">{{ block.settings.article_learn_text }} </a>
+        <p class = "card-title">{{ block.settings.article_title }}</p>
+        <a href="{{ block.settings.article_button }}">{{ block.settings.article_button_text }} </a>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+
+
 {% schema %}
   {
     "name": "Read Related Articles",
