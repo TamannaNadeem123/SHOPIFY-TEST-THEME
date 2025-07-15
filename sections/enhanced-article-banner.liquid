@@ -5,6 +5,7 @@
     </div>
   <div class = "modus-blocks">
     {% for block in section.blocks %}
+      <div class ="flex-columns">
       <div class="block-left-column">
         <h3 class="left-column-heading">{{ block.settings.Kratom_heading }}</h3>
         <p class="left-column-content">{{ block.settings.Kratom_para | newline_to_br }}</p>
@@ -18,8 +19,9 @@
       <p class="card-text">{{ block.settings.card_text  }}</p>
       <a href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
       </div>
+           </div>
     {% endfor %}
-    </div>
+  </div>
   </div>
 
 
