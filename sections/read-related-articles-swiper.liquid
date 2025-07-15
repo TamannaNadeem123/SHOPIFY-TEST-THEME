@@ -1,7 +1,5 @@
-{{'read-articles-swiper.css' |asset_url |stylesheet_tag  }}
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+{{'read-articles-without-swiper.css' |asset_url |stylesheet_tag  }}
 <div class = "read-article-section ">
-  <div class= "swiper custom-my-swiper">
   <div class="article-header">
     <h2 class="header-heading">{{ section.settings.articles_heading }}</h2>
     <div class="nav-buttons">
@@ -34,10 +32,8 @@
     </div>
       </div>
       </div>
-  
-      <div class="swiper-wrapper">
+  <div class="blocks-container">
     {% for block in section.blocks %}
-      <div class = "swiper-slide">
       <div class = "article-card"
         style="background-image: url('{{ block.settings.back_image | image_url: width:block.settings.back_image.width , height: block.settings.back_image.height }}');
         background-size: cover;
@@ -48,13 +44,12 @@
         <p class = "card-title">{{ block.settings.article_title |newline_to_br }}</p>
         <a class="read-button" href="{{ block.settings.article_button }}">{{ block.settings.article_button_text }} </a>
       </div>
-         </div>
       {% endfor %}
   </div>
 </div>
-</div>
 
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 {% schema %}
   {
     "name": "Read Related Articles",
@@ -105,46 +100,8 @@
     ],
     "presets": [
       {
-        "name": "Read Related Articles Swiper"
+        "name": "Read Related Articles"
       }
     ]
   }
 {% endschema %}
-
-<script>
-    var swiper = new Swiper(".custom-my-swiper", {
-      navigation: {
-        nextEl: ".nav-next-button",
-        prevEl: ".nav-previous-button",
-      },
-       breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-    },
-    on: {
-      init: checkNextButton,
-      slideChange: checkNextButton,
-      resize: checkNextButton,
-    }
-  });
-  function checkNextButton() {
-    const nextBtn = document.querySelector('.nav-next-button');
-    const currentIndex = swiper.activeIndex;
-    const totalSlides = swiper.slides.length;
-
-
-    let slidesToShow = window.innerWidth <= 480 ? 1 : 4;
-
-    const lastIndex = totalSlides - slidesToShow;
-
-    if (currentIndex >= lastIndex) {
-      nextBtn.style.pointerEvents = "none";
- 
-    } else {
-      nextBtn.style.pointerEvents = "auto";
-      nextBtn.style.opacity = "1";
-    }
-  }
-  </script>
