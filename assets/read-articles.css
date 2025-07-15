@@ -50,6 +50,7 @@
 }
 .read-button{
   position:absolute;
+  z-index:2;
   bottom:3%;
   left:3%;
   padding: 10px 24px;
