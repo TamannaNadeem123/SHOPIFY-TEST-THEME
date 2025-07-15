@@ -67,3 +67,8 @@
   text-decoration: none;
   border-radius: 29px;
 }
+
+@media only screen and (max-width:767px){
+  .blocks-container{
+    flex-direction:column;
+}
