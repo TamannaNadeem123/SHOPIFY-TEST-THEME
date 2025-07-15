@@ -13,10 +13,7 @@
   align-items: center !important;
 }
 .custom-my-swiper .swiper-slide {
-    border-radius: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 5px !important;
+  width: 33.33% !important;
 }
 
 .article-header{
@@ -39,7 +36,7 @@
 
 .article-card{
   overflow: hidden;
-  width: 33.33%;
+  width: 100%;
   border-radius: 18px;
   max-width: 353.25px;
   height: 437.89px;
