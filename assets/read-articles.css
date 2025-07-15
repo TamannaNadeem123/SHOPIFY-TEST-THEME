@@ -1,3 +1,9 @@
+.header-heading{
+  font-size: 50px;
+  font-weight:900;
+}
+
+
 .blocks-container{
       max-width: 1200px;
   background-color: #F3F3F3;
