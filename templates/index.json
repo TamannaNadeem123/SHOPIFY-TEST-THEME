@@ -482,11 +482,48 @@
         "background_color": "#3e6d3d"
       }
     },
-    "figma_feature_functionality_ecnmrQ": {
-      "type": "figma-feature-functionality",
-      "name": "Figma Feature Implementation",
+    "enhanced_article_banner_Kj4dYW": {
+      "type": "enhanced-article-banner",
+      "blocks": {
+        "text_MQ6eLA": {
+          "type": "Text",
+          "settings": {
+            "Kratom_heading": "",
+            "Kratom_para": "",
+            "card_text": "",
+            "button_text": "SHOP NOW",
+            "button_link": ""
+          }
+        },
+        "text_EbCaPD": {
+          "type": "Text",
+          "settings": {
+            "Kratom_heading": "",
+            "Kratom_para": "",
+            "card_text": "",
+            "button_text": "SHOP NOW",
+            "button_link": ""
+          }
+        },
+        "text_EAfPpT": {
+          "type": "Text",
+          "settings": {
+            "Kratom_heading": "",
+            "Kratom_para": "",
+            "card_text": "",
+            "button_text": "SHOP NOW",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_MQ6eLA",
+        "text_EbCaPD",
+        "text_EAfPpT"
+      ],
+      "name": "ENHANCED ARTICLE BANNER",
       "settings": {
-        "product": "chicken-product-nextrition"
+        "modus_heading": "Favorites from Modus Life"
       }
     }
   },
@@ -501,6 +538,6 @@
     "blog_DrLtnX",
     "social_made_me_buy_WmbUx9",
     "newsletter_good_clean_love_a7UfeL",
-    "figma_feature_functionality_ecnmrQ"
+    "enhanced_article_banner_Kj4dYW"
   ]
 }
