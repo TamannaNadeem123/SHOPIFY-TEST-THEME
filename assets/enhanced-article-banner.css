@@ -52,3 +52,7 @@ margin: 15..25px 27.62px  138.74px 27.62px;
   text-align:center;
   font-weight:700px;
 }
+.button{
+  background-color: #D4F897;
+  corner-radius: 29px;
+}
