@@ -81,7 +81,7 @@
   .blocks-container{
     flex-direction:column;
 }
-  .header{
+  .article-header{
     margin: 0 30px;
   }
   .header-heading{
