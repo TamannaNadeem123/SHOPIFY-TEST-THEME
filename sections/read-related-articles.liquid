@@ -1,13 +1,10 @@
 {{'read-articles.css' |asset_url |stylesheet_tag  }}
-<div class ="swiper MySwiper ">
-<div class = "read-article-section">
+<div class = "read-article-section ">
   <div class="article-header">
     <h2 class="header-heading">{{ section.settings.articles_heading }}</h2>
   </div>
   <div class="blocks-container">
-     <div class="swiper-wrapper">
     {% for block in section.blocks %}
-      <div class="swiper-slide">
       <div class = "article-card"
         style="background-image: url('{{ block.settings.back_image | image_url: width:block.settings.back_image.width , height: block.settings.back_image.height }}');
         background-size: cover;
@@ -18,28 +15,9 @@
         <p class = "card-title">{{ block.settings.article_title |newline_to_br }}</p>
         <a class="read-button" href="{{ block.settings.article_button }}">{{ block.settings.article_button_text }} </a>
       </div>
-      </div>
       {% endfor %}
   </div>
-  </div>
-  <div class ="nav-buttons">
-   <div class="swiper-button-next">
-  <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-labelledby="rightArrowLabel">
-  <title id="rightArrowLabel">Next</title>
-  <circle cx="25" cy="25" r="25" fill="#313131"/>
-  <path d="M20 18 L30 25 L20 32" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-  </div>
-  <div class="swiper-button-previous">
-    <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-labelledby="leftArrowLabel">
-  <title id="leftArrowLabel">Previous</title>
-  <circle cx="25" cy="25" r="25" fill="#313131"/>
-  <path d="M30 18 L20 25 L30 32" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-  </div>
-  </div>
-       </div>
-  </div>
+</div>
 
 
 
