@@ -1,3 +1,21 @@
+.swiper .custom-my-swiper{
+  over-flow: hidden !important;
+   position:relative !important;
+    max-width: 100% !important;
+  
+}
+.custom-my-swiper .swiper-wrapper {
+   max-width: 1200px !important;
+  background-color: #F3F3F3 !important;
+  margin: 0 auto !important;
+  display:flex !important;
+    gap: 16.4px !important;
+  align-items: center !important;
+}
+.custom-my-swiper .swiper-slide {
+  width: 29.5% !important;
+}
+
 .article-header{
     max-width: 1200px;
   margin: 0 auto;
@@ -15,17 +33,10 @@
   font-weight:700;
 
 }
-.blocks-container{
-      max-width: 1200px;
-  background-color: #F3F3F3;
-  margin: 0 auto;
-  display:flex;
-    gap: 16.4px;
-  align-items: center;
-}
+
 .article-card{
   overflow: hidden;
-  width: 33.33%;
+  width: 100%;
   border-radius: 18px;
   max-width: 353.25px;
   height: 437.89px;
