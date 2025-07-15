@@ -28,3 +28,11 @@
   font-weight: 700;
   text-decoration: none;
 }
+.card-title{
+  font-size: 25px;
+  color:white;
+  position:absolute;
+  z-index:1;
+  bottom:8%;
+  left:3%;
+}
