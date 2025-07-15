@@ -575,6 +575,53 @@
       "settings": {
         "articles_heading": "Read related articles"
       }
+    },
+    "read_related_articles_swiper_Y4UkRD": {
+      "type": "read-related-articles-swiper",
+      "blocks": {
+        "text_N8iHgJ": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_1e75fa6c-a170-48b1-b45e-e8dd74e16326.png",
+            "article_title": "Kratom & Alcohol: \nEverything You\n Need To Know",
+            "article_button": "",
+            "article_button_text": "Read more",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        },
+        "text_rpxk9g": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_1_d3983b5a-1732-441e-9a1b-a91be8ce12d7.png",
+            "article_title": "7OH vs \nPseudoindoxyl \nvs OG Kratom",
+            "article_button": "",
+            "article_button_text": "Read more",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        },
+        "text_H6rpAP": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_2_e6614421-8a96-4a24-892d-18168a741054.png",
+            "article_title": "Decoding Kratom \nLegality: A State \nBy State Guide",
+            "article_button": "",
+            "article_button_text": "Read more",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        }
+      },
+      "block_order": [
+        "text_N8iHgJ",
+        "text_rpxk9g",
+        "text_H6rpAP"
+      ],
+      "name": "Read Related Articles Swiper",
+      "settings": {
+        "articles_heading": "Real related articles"
+      }
     }
   },
   "order": [
@@ -589,6 +636,7 @@
     "social_made_me_buy_WmbUx9",
     "newsletter_good_clean_love_a7UfeL",
     "enhanced_article_banner_Kj4dYW",
-    "read_related_articles_gLwHJd"
+    "read_related_articles_gLwHJd",
+    "read_related_articles_swiper_Y4UkRD"
   ]
 }
