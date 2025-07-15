@@ -7,7 +7,7 @@
     {% for block in section.blocks %}
       <div class="block-left-column">
         <h3 class="left-column-heading">{{ block.settings.Kratom_heading }}</h3>
-        <p class="left-column-content">{{ block.settings.Kratom_para }}</p>
+        <p class="left-column-content">{{ block.settings.Kratom_para | newline_to_br }}</p>
       </div>
     <div class="block-right-column-card">
      <div class="card-background">
@@ -15,7 +15,7 @@
           <img src="{{ block.settings.card_image |image_url: width: block.settings.card_image.width, height: block.settings.card_image.height }}">
         </div>
       </div>
-      <p class="card-text">{{ block.settings.card_text |newline_to_br }}</p>
+      <p class="card-text">{{ block.settings.card_text  }}</p>
       <a href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
       </div>
     {% endfor %}
