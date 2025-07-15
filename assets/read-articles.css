@@ -7,8 +7,6 @@
   font-weight:700;
 
 }
-
-
 .blocks-container{
       max-width: 1200px;
   background-color: #F3F3F3;
@@ -82,4 +80,8 @@
 @media only screen and (max-width:767px){
   .blocks-container{
     flex-direction:column;
+}
+  .article-card{
+    width:100%;
+  }
 }
