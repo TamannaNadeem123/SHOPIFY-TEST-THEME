@@ -14,8 +14,6 @@
 }
 
 .block-right-column-card{
-  display:flex;
-  justify-content:center;
   align-items:center;
   max-width:540.1px;
   border-radius:16px;
