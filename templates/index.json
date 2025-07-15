@@ -531,6 +531,46 @@
     },
     "read_related_articles_gLwHJd": {
       "type": "read-related-articles",
+      "blocks": {
+        "text_iBQwxK": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_1e75fa6c-a170-48b1-b45e-e8dd74e16326.png",
+            "article_title": "Kratom & Alcohol: Everything You Need To Know",
+            "article_button": "",
+            "article_button_text": "Read Now",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        },
+        "text_9qbJCe": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_1_d3983b5a-1732-441e-9a1b-a91be8ce12d7.png",
+            "article_title": "7OH vs Pseudoindoxyl vs OG Kratom",
+            "article_button": "",
+            "article_button_text": "Read now",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        },
+        "text_PBewzy": {
+          "type": "text",
+          "settings": {
+            "back_image": "shopify://shop_images/image_2_e6614421-8a96-4a24-892d-18168a741054.png",
+            "article_title": "Decoding Kratom Legality: A State By State Guide",
+            "article_button": "",
+            "article_button_text": "Read now",
+            "learn_button": "",
+            "learn_text": "Learn"
+          }
+        }
+      },
+      "block_order": [
+        "text_iBQwxK",
+        "text_9qbJCe",
+        "text_PBewzy"
+      ],
       "name": "Read Related Articles",
       "settings": {
         "articles_heading": "Read related articles"
