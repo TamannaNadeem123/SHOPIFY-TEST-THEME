@@ -15,8 +15,11 @@
           <img src="{{ block.settings.card_image |image_url: width: block.settings.card_image.width, height: block.settings.card_image.height }}">
         </div>
       </div>
+      <p>{{ block.settings.card_text }}</p>
+      <a>{{ block.settings.button_text }}</a>
+      </div>
+    {% endfor %}
     </div>
-      {% endfor %}
   </div>
 </div>
 
