@@ -1,5 +1,7 @@
 {{'read-articles-swiper.css' |asset_url |stylesheet_tag  }}
+
 <div class = "read-article-section ">
+  <div class= "swiper custom-my-swiper">
   <div class="article-header">
     <h2 class="header-heading">{{ section.settings.articles_heading }}</h2>
     <div class="nav-buttons">
@@ -47,7 +49,7 @@
       {% endfor %}
   </div>
 </div>
-
+</div>
 
 
 {% schema %}
