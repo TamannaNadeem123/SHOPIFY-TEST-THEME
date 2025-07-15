@@ -81,6 +81,14 @@
   .blocks-container{
     flex-direction:column;
 }
+  .header{
+    margin: 0 30px;
+  }
+  .header-heading{
+  font-size: 30px;
+  font-weight:700;
+
+}
   .article-card{
     width:100%;
   }
