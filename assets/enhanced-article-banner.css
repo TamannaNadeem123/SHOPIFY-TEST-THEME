@@ -16,10 +16,10 @@
 .block-right-column-card{
   max-width:540.1px;
   border-radius:12px;
-  border: 1px solid 
+  border: 1px solid #C9C9C9;
   background-color: #C9C9C9;
 }
 .card-background{
-  padding: 15..25px 27.62px  138.74px 27.62px
+  padding: 15..25px 27.62px  138.74px 27.62px;
   background-color: white;
 }
