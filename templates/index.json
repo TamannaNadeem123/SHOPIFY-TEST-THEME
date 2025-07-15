@@ -533,7 +533,7 @@
       "type": "read-related-articles",
       "name": "Read Related Articles",
       "settings": {
-        "articles_heading": "READ RELATED ARTICLES"
+        "articles_heading": "Read related articles"
       }
     }
   },
