@@ -8,4 +8,5 @@
 }
 .modus-blocks{
   display:flex;
+  flex-direction: column;
 }
