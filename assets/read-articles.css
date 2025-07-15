@@ -1,4 +1,6 @@
-
+.blocks-container{
+  display:flex;
+}
 .article-card{
   width: 33.33%;
   max-width: 353.25px;
