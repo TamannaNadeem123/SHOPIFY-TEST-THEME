@@ -1,0 +1,370 @@
+#quiz-page-1{
+    padding: 0 72px;
+}
+.quiz-first-screen-container{
+    display:flex;
+    justify-content: space-between;
+}
+.first-screen-content,
+.fourth-screen-content,
+.second-screen-content,
+.third-screen-content,
+.fifth-screen-content,
+.sixth-screen-content,
+.seventh-screen-content,
+.eighth-screen-content,
+.nineth-screen-content,
+.tenth-screen-content{
+    text-align:center;
+}
+.first-screen-content-heading{
+    margin-bottom:16px;
+}
+.first-screen-content-description{
+    margin-bottom:32px;
+    font-size:16px;
+}
+.custom-input-field:hover{
+     box-shadow:none;
+     outline:none;
+}
+.custom-input-field{
+    text-align:center;
+    padding: 28px 12px;
+    width: 340px;
+    height: 56px;
+    margin-bottom: 24px;
+    border: 1px solid gray;
+    font-size: 16px;
+    line-height: 24px;
+    outline:none;
+    box-shadow:none;
+}
+.left-first-screen-image img{
+   object-fit:cover;
+   object-position: center;
+   width:100%;
+}
+.custom-continue-button button{
+        border: none;
+        box-shadow:none;
+        outline:none;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+}
+.fifth-screen-sub-description{
+    font-size:12px;
+}
+.disabled{
+    opacity:0.5;
+    cursor:none;
+    pointer-events: none;
+}
+
+#quiz-page-2,
+#quiz-page-3,
+#quiz-page-4,
+#quiz-page-5,
+#quiz-page-6,
+#quiz-page-7,
+#quiz-page-8,
+#quiz-page-9,
+#quiz-page-10{
+    display: none;
+}
+.custom-email-field,
+.custom-weight-field{
+    text-align:center;
+    padding: 28px 12px;
+    width: 340px;
+    height: 56px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    font-size: 16px;
+    line-height: 24px;
+    outline:none;
+    box-shadow:none;
+}
+
+.second-screen-content-heading,
+.fifth-screen-content-heading{
+    margin-bottom:38px;
+}
+.second-screen-content-description{
+    margin-bottom:22px;
+    font-size:16px;
+}
+
+.custom-email-field:hover{
+     box-shadow:none;
+     outline:none;
+}
+
+.age-input{
+    display:flex;
+    gap:50px;
+    align-items:center;
+        border: 1px solid gray;
+    background-color: #fff;
+    width:320px;
+    margin-bottom:10px;
+}
+.age-input svg{
+    margin-left:20px;
+}
+.page-3-container{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+}
+.quiz-dropdown{
+    outline:none;
+    appearance: none;
+    border:none;
+    color: #818182;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 16px;
+}
+.custom-continue-and-back-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.custom-continue-and-back-button button{
+        border: none;
+        font-size:16x;
+        box-shadow:none;
+        outline:none;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    padding-top:32px;
+}
+
+.add-it-button{
+    color: blue;
+    font-size:12px;
+}
+.quiz-weight-dropdown{
+     outline:none;
+  width:320px;
+  box-shadow: none;
+    border:1px solid gray;
+    color: #818182;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 24px 16px;
+}
+.activity-options,
+.body-type-options{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.activity-card-image{
+    margin-top:12px;
+}
+.activity-card h3,
+.body-type-card h3{
+font-weight:600;
+}
+.activity-card,
+.body-type-card{
+    border:2px solid black;
+    text-align:center;
+    width:195px;
+    padding:5px 10px;
+}
+.activity-card.selected,
+.body-type-card.selected {
+  border: 2px solid #1594C1;
+  background-color: rgba(21, 148, 193, 0.4);
+  cursor: pointer;
+}
+.health-allergies-container,
+.food-allergies-container{
+    max-width:1130px;
+    margin: 0 auto;
+}
+.feeding-plan-container{
+    max-width:1130px;
+    margin: 0 auto;
+}
+.feeding-plan-wrapper{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.health-allergies-wrapper,
+.food-allergies-wrapper{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.health-screen-individual-option,
+.food-screen-individual-option,
+.feeding-plan-individual-option{
+        width: 264px;
+    border: 1px solid #DDDDDD;
+    display: inline-flex;
+    align-items: center;
+}
+.custom-checkbox{
+    height: 20px;
+    width: 20px;
+     position: relative;
+    background-color: transparent;
+    border: 2px solid #000;
+    margin-left:15px;
+}
+.input-label-style{
+    padding-left:53px;
+    user-select: none;
+    width: 100%;
+    text-align: left;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+}
+.health-issues:checked + .custom-checkbox{
+    background-color:#1594C1;
+    border: 2px solid #1594C1;
+}
+ .health-issues,
+ .food-allergies,
+ .feeding-plan {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}
+.eighth-screen-content p,
+.nineth-screen-content p,
+.tenth-screen-content p{
+    margin-bottom:40px;
+}
+.food-allergies:checked + .custom-checkbox {
+  background-color:#1594C1;
+  border-color: #1594C1;
+}
+.feeding-plan:checked + .custom-checkbox {
+  background-color: #1594C1;
+  border-color: #1594C1;
+}
+.feeding-plan-individual-option:has(.feeding-plan:checked) {
+  border: 1px solid #1594C1;
+  background-color: rgba(21, 148, 193, 0.15);
+}
+.health-screen-individual-option:has(.health-issues:checked) {
+  border: 1px solid #1594C1;
+  background-color: rgba(21, 148, 193, 0.15);
+}
+.food-screen-individual-option:has(.food-allergies:checked) {
+  border: 1px solid #1594C1;
+  background-color: rgba(21, 148, 193, 0.15);
+}
+.food-allergies:checked + .custom-checkbox::after {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+.health-issues:checked + .custom-checkbox::after {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+.feeding-plan:checked + .custom-checkbox::after {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+@media screen and (max-width:767px) {
+    .quiz-first-screen-container{
+        display:flex;
+        flex-direction:column;
+    }
+    .custom-input-field{
+    padding: 20px 12px;
+    width: 240px;
+    height: 56px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    outline:none;
+    box-shadow:none;
+}
+.custom-email-field,
+.custom-weight-field{
+    padding: 20px 12px;
+    width: 240px;
+    height: 56px;
+}
+.fifth-screen-sub-description{
+    font-size:11px;
+}
+.add-it-button{
+    font-size:11px;
+}
+.activity-options,
+.body-type-options{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.activity-card,
+.body-type-card{
+    border:2px solid black;
+    text-align:center;
+    width:215px;
+    padding:5px 10px;
+}
+
+.feeding-plan-wrapper,
+.health-allergies-wrapper,
+.food-allergies-wrapper{
+    display:flex;
+flex-wrap: wrap;
+}
+.health-screen-individual-option,
+.food-screen-individual-option,
+.feeding-plan-individual-option{
+        width: 304px;
+}
+#quiz-page-1{
+    padding: 0px 20px;
+}
+.first-screen-content p,
+.second-screen-content p,
+.third-screen-content p,
+.fourth-screen-content p,
+.fifth-screen-content p,
+.sixth-screen-content p,
+.seventh-screen-content p,
+.eighth-screen-content p,
+.nineth-screen-content p,
+.tenth-screen-content p{
+    font-size:13px;
+}
+}

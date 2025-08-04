@@ -1,0 +1,648 @@
+{{'dog-feeding-quiz.css' | asset_url | stylesheet_tag}}
+
+<div id="quiz-page-1">
+  <div class="quiz-first-screen-container">
+    <div class="left-first-screen-image">
+      {% if section.settings.quiz_side_img != blank %}
+        <img src="{{ section.settings.quiz_side_img | img_url: 'master' }}">
+      {% endif %}
+    </div>
+    <div class="first-screen-content">
+      <h2 class="first-screen-content-heading">{{ section.settings.quiz_title |newline_to_br }}</h2>
+      <p class="first-screen-content-description">{{ section.settings.quiz_text |newline_to_br }}</p>
+      <input class="custom-input-field" type="text" id="fname" name="fname" placeholder="What’s your furry friend’s name?">
+    <div class="custom-continue-button">
+      <button id="continue-button" disabled>
+      CONTINUE →
+    </button>
+     </div>
+  </div>
+</div>
+</div>
+<div id="quiz-page-2">
+ <div class="second-screen-content">
+      <h2 class="second-screen-content-heading">{{ section.settings.quiz_2_title |newline_to_br }}</h2>
+      <p class="first-screen-content-description">{{ section.settings.quiz_2_text |newline_to_br }}</p>
+      <input class="custom-email-field" type="email" id="email" name="email" placeholder="Enter your email here.....">
+    <div class="custom-continue-and-back-button">
+    <button id="back-button-1">
+      ← BACK
+    </button>
+      <button id="continue-button-1" disabled>
+      CONTINUE →
+    </button>
+</div>
+</div>
+</div>
+<div id="quiz-page-3">
+<div class="page-3-container">
+<div class="third-screen-content">
+      <h2 class="third-screen-content-heading">{{ section.settings.quiz_3_title |newline_to_br }} <span id="pet-name-placeholder">your pet?</span>   <span>?</span></h2>
+      <p class="third-screen-content-description">{{ section.settings.quiz_3_text |newline_to_br }}</p>
+      </div>
+      <div class="age-input">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+ <g clip-path="url(#clip0_988_5699)">
+ <path d="M17 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H7V1H9V3H15V1H17V3ZM15 5H9V7H7V5H4V9H20V5H17V7H15V5ZM20 11H4V19H20V11ZM6 14H8V16H6V14ZM10 14H18V16H10V14Z" fill="#818182"></path>
+</g>
+ <defs>
+ <clipPath id="clip0_988_5699">
+ <rect width="24" height="24" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>
+     <select id="pet-age" class="quiz-dropdown">
+    <option value="0" disabled selected hidden>Select age</option>
+    <option value="2-6 months">2-6 Months Old</option>
+    <option value="6-12 months">6-12 Months Old</option>
+    <option value="1 year">1 year Old</option>
+     <option value="2 year">2 years Old</option>
+      <option value="3 year">3 years Old</option>
+       <option value="4 year">4 years Old</option>
+        <option value="5 year">5 years Old</option>
+    <option value="6 year">6 years Old</option>
+     <option value="7 year">7 years Old</option>
+      <option value="8 year">8 years Old</option>
+       <option value="9 year">9 years Old</option>
+        <option value="10 year">10 years Old</option>
+    <option value="11+ years">11+ years Old</option>
+  </select>
+  </div>
+   <div class="custom-continue-and-back-button">
+    <button id="back-button-2">
+      ← BACK
+    </button>
+      <button id="continue-button-2" disabled>
+      CONTINUE →
+    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="quiz-page-4">
+<div class="fourth-screen-content">
+      <h2 class="fourth-screen-content-heading"> {{ section.settings.quiz_4_title_start }} 
+    <span id="pet-name-placeholder-4">your pet</span> 
+    {{ section.settings.quiz_4_title_end }}</h2>
+      <p class="fourth-screen-content-description">{{ section.settings.quiz_4_text |newline_to_br }}</p>
+      <input class="custom-weight-field" type="text" id="text" name="text" placeholder= "Type current weight (lbs)">
+    <div class="custom-continue-and-back-button">
+    <button id="back-button-3">
+      ← BACK
+    </button>
+      <button id="continue-button-3" disabled>
+      CONTINUE →
+    </button>
+</div>
+</div>
+</div>
+<div id="quiz-page-5">
+<div class="fifth-screen-content">
+      <h2 class="fifth-screen-content-heading"> {{ section.settings.quiz_5_title }} 
+    <span id="pet-name-placeholder-5">your pet?</span>
+    <span>?</span> </h2>
+      <p class="fifth-screen-content-description">{{ section.settings.quiz_5_text |newline_to_br }}</p>
+       <select id="petweight" class="quiz-weight-dropdown">
+    <option value="0" disabled selected hidden>Select Breed</option>
+    <option value="Abruzzenhund">Abruzzenhund</option>
+     <option value="AdronicusMastiff">AdronicusMastiff</option>
+      <option value="Afador">Afador</option>
+     
+    
+  </select>
+      <p class="fifth-screen-sub-description">{{ section.settings.quiz_5_sub_text |newline_to_br }} <a class="add-it-button" href="{{section.settings.add_it_here_link}}">{{section.settings.add_it_here_text}}</a></p>
+    <div class="custom-continue-and-back-button">
+    <button id="back-button-4">
+      ← BACK
+    </button>
+      <button id="continue-button-4" disabled>
+      CONTINUE →
+    </button>
+</div>
+</div>
+</div>
+<div id="quiz-page-6">
+ <div class="sixth-screen-content">
+    <h2 class="sixth-screen-heading"><span id="dog-name-placeholder-6">Your pet </span> {{ section.settings.activity_screen_title}}</h2>
+    <div class="activity-options">
+     <div class="activity-card" id="not-very-active">
+     <img class="activity-card-image" src = "{{section.settings.quiz_activity_img_1 |img_url:small}}">
+        <h3>{{ section.settings.activity_option_1_title }}</h3>
+        <p>{{ section.settings.activity_option_1_desc }}</p>
+      </div>
+      <div class="activity-card" id="active">
+       <img class="activity-card-image" src = "{{section.settings.quiz_activity_img_2 |img_url:small}}">
+        <h3>{{ section.settings.activity_option_2_title }}</h3>
+        <p>{{ section.settings.activity_option_2_desc }}</p>
+      </div>
+      <div class="activity-card" id="very-active">
+       <img class="activity-card-image" src = "{{section.settings.quiz_activity_img_3 |img_url:small}}">
+        <h3>{{ section.settings.activity_option_3_title }}</h3>
+        <p>{{ section.settings.activity_option_3_desc |newline_to_br }}</p>
+      </div>
+    </div>
+    </div>
+    <div class="custom-continue-and-back-button">
+      <button id="back-button-5">← BACK</button>
+      <button id="continue-button-5" disabled>CONTINUE →</button>
+    </div>
+</div>
+
+<div id="quiz-page-7">
+ <div class="seventh-screen-content">
+    <h2 class="seventh-screen-heading"><span id="dog-name-placeholder-7">Your pet  </span> {{ section.settings.body_screen_title}}</h2>
+    <div class="body-type-options">
+     <div class="body-type-card" id="skinny">
+     <img class="body-type-image" src = "{{section.settings.quiz_body_img_1 |img_url:small}}">
+        <h3>{{ section.settings.body_1_title }}</h3>
+        <p>{{ section.settings.body_type_option_1_desc }}</p>
+      </div>
+      <div class="body-type-card" id="just-right">
+       <img class="body-type-image" src = "{{section.settings.quiz_body_img_2 |img_url:small}}">
+        <h3>{{ section.settings.body_2_title }}</h3>
+        <p>{{ section.settings.body_type_option_2_desc }}</p>
+      </div>
+      <div class="body-type-card" id="overweight">
+       <img class="body-type-image" src = "{{section.settings.quiz_body_img_3 |img_url:small}}">
+        <h3>{{ section.settings.body_3_title }}</h3>
+        <p>{{ section.settings.body_type_option_3_desc |newline_to_br }}</p>
+      </div>
+    </div>
+    <div class="custom-continue-and-back-button">
+      <button id="back-button-6">← BACK</button>
+      <button id="continue-button-6" disabled>CONTINUE →</button>
+    </div>
+</div>
+  </div>
+  <div id="quiz-page-8">
+  <div class="eighth-screen-content">
+  <h2><span id="dog-name-placeholder-8">Your Pet </span> {{section.settings.quiz_health_screen}}</h2>
+  <p> {{section.settings.quiz_health_screen_desc}}</p>
+<div class="health-allergies-container">
+<div class="health-allergies-wrapper">
+  <div class="health-screen-individual-option">
+        <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Bad Breath" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Bad Breath</span>
+</label>
+  </div>
+  <div class="health-screen-individual-option">
+       <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Constipation" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Constipation</span>
+</label>
+  </div>
+  <div class="health-screen-individual-option">
+       <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Diarrhea" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Diarrhea</span>
+</label>
+  </div>
+  <div class="health-screen-individual-option">
+    <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Vomiting" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Vomiting</span>
+</label>
+  </div>
+  <div class="health-screen-individual-option">
+    <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Hip & Joint Issues" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Hip & Joint Issues</span>
+</label>
+  </div>
+   <div class="health-screen-individual-option">
+     <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Weak Immune System" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Weak Immune System</span>
+</label>
+  </div>
+   <div class="health-screen-individual-option">
+  <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="No Health Issues" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">No Health Issues</span>
+</label>
+  </div>
+    <div class="health-screen-individual-option">
+      <label class="health-screen-individual-option">
+  <input type="checkbox" name="health-issues" value="Other" class="health-issues">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Other</span>
+</label>
+  </div>
+  </div>
+  </div>
+  <div class="custom-continue-and-back-button">
+      <button id="back-button-7">← BACK</button>
+      <button id="continue-button-7" disabled>CONTINUE →</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="quiz-page-9">
+  <div class="nineth-screen-content">
+  <h2>{{section.settings.quiz_food_screen}} <span id="dog-name-placeholder-9">Your Pet  </span></h2>
+  <p> {{section.settings.quiz_food_screen_desc}}</p>
+<div class="food-allergies-container">
+<div class="food-allergies-wrapper">
+  <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Apple" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Apple</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Sweet Potato" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Sweet Potato</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Cranberry" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Cranberry</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+   <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Lentils" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Lentils</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Carrot" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Carrot</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+   <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Blueberry" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Blueberry</span>
+</label>
+  </div>
+   <div class="food-screen-individual-option">
+     <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Chickpeas" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Chickpeas</span>
+</label>
+  </div>
+   <div class="food-screen-individual-option">
+   <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Peas" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Peas</span>
+</label>
+  </div>
+    <div class="food-screen-individual-option">
+   <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Chicken" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Chicken</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Potato" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Potato</span>
+</label>
+  </div>
+  <div class="food-screen-individual-option">
+      <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="No allergies" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">No allergies</span>
+</label>
+  </div>
+    <div class="food-screen-individual-option">
+    <label class="food-screen-individual-option">
+  <input type="checkbox" name="food-allergies" value="Other" class="food-allergies">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Other</span>
+</label>
+  </div>
+  </div>
+  </div>
+  <div class="custom-continue-and-back-button">
+      <button id="back-button-8">← BACK</button>
+      <button id="continue-button-8" disabled>CONTINUE →</button>
+    </div>
+  </div>
+  </div>
+
+   <div id="quiz-page-10">
+  <div class="tenth-screen-content">
+  <h2>{{section.settings.quiz_feeding_plan_screen}} <span id="dog-name-placeholder-10">Your Pet  </span></h2>
+  <p> {{section.settings.quiz_feeding_plan_screen_desc}}</p>
+<div class="feeding-plan-container">
+<div class="feeding-plan-wrapper">
+  <div class="feeding-plan-individual-option">
+<label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="All kibble" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">All kibble</span>
+</label>
+  </div>
+  <div class="feeding-plan-individual-option">
+   <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="All wet/canned food" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">All wet/canned food</span>
+</label>
+  </div>
+  <div class="feeding-plan-individual-option">
+   <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="Mostly kibble, some wet" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Mostly kibble, some wet</span>
+</label>
+  </div>
+  <div class="feeding-plan-individual-option">
+   <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="Mostly wet, some kibble" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Mostly wet, some kibble</span>
+</label>
+  </div>
+  <div class="feeding-plan-individual-option">
+  <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="Half kibble, half wet" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Half kibble, half wet</span>
+</label>
+  </div>
+  <div class="feeding-plan-individual-option">
+    <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="Mostly kibble, wet as a topper" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Mostly kibble, wet as a topper</span>
+</label>
+  </div>
+   <div class="feeding-plan-individual-option">
+     <label class="feeding-plan-individual-option">
+  <input type="checkbox" name="feeding-plan" value="Not sure" class="feeding-plan">
+  <span class="custom-checkbox"></span>
+  <span class="input-label-style">Not sure</span>
+</label>
+  </div>
+  </div>
+  </div>
+  <div class="custom-continue-and-back-button">
+      <button id="back-button-9">← BACK</button>
+      <button id="continue-button-9" disabled>CONTINUE →</button>
+    </div>
+  </div>
+  </div>
+<script defer src="{{ 'dog-feeding-quiz.js' | asset_url }}"></script>
+{% schema %}
+{
+  "name": "Dog Feeding Quiz",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "quiz_side_img",
+      "label": "Enter Image"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_title",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_text",
+      "label": "Enter Description"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_2_title",
+      "label": "Enter title for screen 2"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_2_text",
+      "label": "Enter Description for screen 2"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_3_title",
+      "label": "Enter title for screen 3"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_3_text",
+      "label": "Enter Description for screen 3"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_4_title_start",
+      "label": "Enter Starting title for screen 4"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_4_title_end",
+      "label": "Enter title for screen 4"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_4_text",
+      "label": "Enter Description for screen 4"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_5_title",
+      "label": "Enter title for screen 5"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_5_text",
+      "label": "Enter Description for screen 5"
+    },
+     {
+      "type": "textarea",
+      "id": "quiz_5_sub_text",
+      "label": "Enter Sub Description for screen 5"
+    },
+    {
+      "type":"url",
+      "id": "add_it_here_link",
+      "label": "Enter Button Link to add breed"
+    },
+      {
+      "type":"text",
+      "id": "add_it_here_text",
+      "label": "Enter Text to add breed of your pet"
+    },
+{
+  "type": "text",
+  "id": "activity_screen_title",
+  "label": "Activity Screen Title",
+  "default": "Activity Level"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_activity_img_1",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "activity_option_1_title",
+  "label": "Activity Option 1 - Title",
+  "default": "Not very active"
+},
+{
+  "type": "textarea",
+  "id": "activity_option_1_desc",
+  "label": "Activity Option 1 - Description",
+  "default": "Focused on cuddles and hooman time"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_activity_img_2",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "activity_option_2_title",
+  "label": "Activity Option 2 - Title",
+  "default": "Active"
+},
+{
+  "type": "textarea",
+  "id": "activity_option_2_desc",
+  "label": "Activity Option 2 - Description",
+  "default": "Walks 3–5x per week, plus playtime"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_activity_img_3",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "activity_option_3_title",
+  "label": "Activity Option 3 - Title",
+  "default": "Very active"
+},
+{
+  "type": "textarea",
+  "id": "activity_option_3_desc",
+  "label": "Activity Option 3 - Description",
+  "default": "Zoomies for days! 30+ min of play daily"
+},
+{
+  "type": "text",
+  "id": "body_screen_title",
+  "label": "Body Type Screen Title",
+  "default": "Body Type"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_body_img_1",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "body_1_title",
+  "label": "Body Type Option 1 - Title",
+  "default": "Skinny"
+},
+{
+  "type": "textarea",
+  "id": "body_type_option_1_desc",
+  "label": "Body Type Option 1 - Description",
+  "default": "Dog’s ribs feel like back of your fingers"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_body_img_2",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "body_2_title",
+  "label": "Body Type Option 2 - Title",
+  "default": "Just right"
+},
+{
+  "type": "textarea",
+  "id": "body_type_option_2_desc",
+  "label": "Body Type Option 2 - Description",
+  "default": "Dog’s ribs feel like back of your hand"
+},
+{
+      "type": "image_picker",
+      "id": "quiz_body_img_3",
+      "label": "Enter Image"
+    },
+{
+  "type": "text",
+  "id": "body_3_title",
+  "label": "Body Type Option 3 - Title",
+  "default": "Overweight"
+},
+{
+  "type": "textarea",
+  "id": "body_type_option_3_desc",
+  "label": "Body Type Option 3 - Description",
+  "default": "Dogs have ribs? I can’t feel them"
+},
+{
+  "type": "text",
+  "id": "quiz_health_screen",
+  "label": "Health Screen - Title",
+  "default": "Health Profile"
+},
+{
+  "type": "textarea",
+  "id": "quiz_health_screen_desc",
+  "label": "Health Screen - Description",
+  "default": "Before we create your custom plan, let us know if Louie has any of these health issues"
+},
+{
+  "type": "text",
+  "id": "quiz_food_screen",
+  "label": "Food Screen - Title",
+  "default": "Any food allergies or tummy issues for"
+},
+{
+  "type": "textarea",
+  "id": "quiz_food_screen_desc",
+  "label": "Food Screen - Description",
+  "default": "Hit us with their sensitivities to help us recommend the best digestion-friendly plan"
+},
+{
+  "type": "text",
+  "id": "quiz_feeding_plan_screen",
+  "label": "Feeding Plan Screen - Title",
+  "default": "What is your feeding plan for"
+},
+{
+  "type": "textarea",
+  "id": "quiz_feeding_plan_screen_desc",
+  "label": "Feeding Plan Screen - Description",
+  "default": "Tell us what mix of food keeps your pup the happiest"
+},
+  ],
+  "presets": [
+    {
+      "name": "Dog Feeding Quiz"
+    }
+  ]
+}
+{% endschema %}
