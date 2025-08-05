@@ -182,6 +182,7 @@ font-weight:600;
     text-align:center;
     width:195px;
     padding:5px 10px;
+    cursor: pointer;
 }
 .activity-card.selected,
 .body-type-card.selected {
@@ -226,6 +227,9 @@ font-weight:600;
     background-color: transparent;
     border: 2px solid #000;
     margin-left:15px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-label-style{
     padding-left:53px;
@@ -278,25 +282,19 @@ font-weight:600;
   content: '✔';
   color: white;
   font-size: 14px;
-  position: absolute;
-  top: 0;
-  left: 2px;
+  position: static;
 }
 .health-issues:checked + .custom-checkbox::after {
   content: '✔';
   color: white;
   font-size: 14px;
-  position: absolute;
-  top: 0;
-  left: 2px;
+  position: static;
 }
 .feeding-plan:checked + .custom-checkbox::after {
-  content: '✔';
+ content: '✔';
   color: white;
   font-size: 14px;
-  position: absolute;
-  top: 0;
-  left: 2px;
+  position: static;
 }
 @media screen and (max-width:767px) {
     .quiz-first-screen-container{

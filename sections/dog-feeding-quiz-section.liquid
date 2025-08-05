@@ -10,7 +10,7 @@
     <div class="first-screen-content">
       <h2 class="first-screen-content-heading">{{ section.settings.quiz_title |newline_to_br }}</h2>
       <p class="first-screen-content-description">{{ section.settings.quiz_text |newline_to_br }}</p>
-      <input class="custom-input-field" type="text" id="fname" name="fname" placeholder="What’s your furry friend’s name?">
+     <input class="custom-input-field" type="text" id="fname" name="fname" placeholder="What’s your furry friend’s name?" pattern="[A-Za-z\s]+" title="Only letters allowed" required>
     <div class="custom-continue-button">
       <button id="continue-button" disabled>
       CONTINUE →
@@ -23,7 +23,9 @@
  <div class="second-screen-content">
       <h2 class="second-screen-content-heading">{{ section.settings.quiz_2_title |newline_to_br }}</h2>
       <p class="first-screen-content-description">{{ section.settings.quiz_2_text |newline_to_br }}</p>
-      <input class="custom-email-field" type="email" id="email" name="email" placeholder="Enter your email here.....">
+      <input class="custom-email-field" type="email" id="email" name="email" placeholder="Enter your email here....."
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+       title="Please enter a valid email address like example@domain.com" required>
     <div class="custom-continue-and-back-button">
     <button id="back-button-1">
       ← BACK
@@ -86,7 +88,7 @@
     <span id="pet-name-placeholder-4">your pet</span> 
     {{ section.settings.quiz_4_title_end }}</h2>
       <p class="fourth-screen-content-description">{{ section.settings.quiz_4_text |newline_to_br }}</p>
-      <input class="custom-weight-field" type="text" id="text" name="text" placeholder= "Type current weight (lbs)">
+<input class="custom-weight-field" type="number" id="text" name="text" placeholder="Type current weight (lbs)" min="0" step="any" required>
     <div class="custom-continue-and-back-button">
     <button id="back-button-3">
       ← BACK

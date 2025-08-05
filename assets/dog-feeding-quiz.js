@@ -20,11 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     continueBtn1.addEventListener("click", function () {
-        console.log("Continue button clicked, going to page 2");
+        if (nameInput.checkValidity()) {
       const petname = nameInput.value.trim();
       localStorage.setItem("petname", petname);
       showpage(2);
-    });
+    }
+  else {
+    nameInput.reportValidity(); 
+  }
+  });
   }
 
   // Screen 2
@@ -48,9 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     continueBtn2.addEventListener("click", function () {
+      if (emailInput.checkValidity()){
       showpage(3);
-    });
-
+    }
+  else {
+    emailInput.reportValidity();
+  }
+  })
     backBtn1.addEventListener("click", function () {
       showpage(1);
     });
